@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://taeyoontax.com"),
   title: {
     default: "태윤세무회계 | 오동욱 공인회계사 · 세무사",
     template: "%s | 태윤세무회계"
@@ -48,6 +49,14 @@ export const metadata: Metadata = {
     siteName: "태윤세무회계",
     locale: "ko_KR",
     type: "website",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "태윤세무회계 | 오동욱 공인회계사 · 세무사",
+      },
+    ],
   },
 };
 
