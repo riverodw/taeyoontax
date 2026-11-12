@@ -94,9 +94,166 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================
-          2. AUTHOR & CREDIBILITY SHOWCASE (베스트셀러 저자 & 공신력)
+          2. CORE SERVICES GRID (3대 핵심 전문 세무 서비스)
       ========================================================= */}
-      <section className="py-20 bg-white border-b border-slate-100">
+      <section className="py-24 bg-slate-50" id="services">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+            <div className="space-y-3">
+              <span className="text-blue-700 font-bold text-xs uppercase tracking-wider">
+                태윤 맞춤 세무 서비스
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                사업과 자산에 꼭 필요한 <br className="hidden sm:inline" />
+                <span className="text-blue-900">3대 핵심 전문 세무 서비스</span>
+              </h2>
+            </div>
+            <p className="text-slate-600 text-sm max-w-md">
+              사업자 세무 관리부터 부동산 특화 세무, 상속·증여·양도까지 각 분야별 체계적인 시스템으로 세무 리스크를 방어합니다.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {siteConfig.services.map((srv, idx) => (
+              <div
+                key={srv.id}
+                className="rounded-2xl p-7 transition-all duration-300 flex flex-col justify-between bg-white border border-slate-200/90 shadow-xs hover:shadow-lg"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <span className="w-10 h-10 rounded-xl bg-blue-50 text-blue-900 font-black text-sm flex items-center justify-center border border-blue-100">
+                      0{idx + 1}
+                    </span>
+                    <h3 className="font-bold text-lg text-slate-900 tracking-tight">
+                      {srv.title}
+                    </h3>
+                  </div>
+
+                  <p className="text-blue-900 font-semibold text-sm">
+                    "{srv.summary}"
+                  </p>
+
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {srv.desc}
+                  </p>
+
+                  <ul className="space-y-2 pt-3 border-t border-slate-100">
+                    {srv.highlights.map((h, i) => (
+                      <li key={i} className="flex items-center gap-2 text-xs text-slate-700">
+                        <CheckCircleIcon className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+                        <span>{h}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                  <Link
+                    href={srv.href}
+                    className="text-xs font-bold text-blue-900 hover:text-blue-700 flex items-center gap-1 transition"
+                  >
+                    <span>상세 서비스 안내</span>
+                    <ArrowRightIcon className="w-3.5 h-3.5" />
+                  </Link>
+                  <a
+                    href={siteConfig.kakaoChannelUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] font-semibold text-[#191919] bg-[#FEE500] hover:bg-[#FADA0A] px-2.5 py-1 rounded-md transition"
+                  >
+                    카톡 문의
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          3. WHY TAEYUN (차별화된 3대 강점)
+      ========================================================= */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-5 space-y-6">
+              <span className="text-blue-700 font-bold text-xs uppercase tracking-wider">
+                태윤을 선택하는 이유
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                왜 수많은 사업자와 <br />
+                자산가가 <span className="text-blue-900">태윤세무회계</span>를 선택할까요?
+              </h2>
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                세무는 단순히 과거의 영수증을 모아 세금을 신고하는 일이 아닙니다.
+                사업의 리스크를 사전에 예방하고, 합법적인 테두리 안에서 기업의 이익을 극대화하는 종합 재무 전략입니다.
+              </p>
+
+              <div className="pt-2">
+                <Link
+                  href="/accountant"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-900 text-white font-semibold text-sm hover:bg-slate-800 transition"
+                >
+                  <span>대표 회계사 소개 더보기</span>
+                  <ArrowRightIcon className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="lg:col-span-7 space-y-4">
+              {/* Feature 1 */}
+              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 transition duration-300 flex items-start gap-5">
+                <div className="w-12 h-12 rounded-xl bg-blue-900 text-white flex items-center justify-center shrink-0">
+                  <AwardIcon className="w-6 h-6 text-amber-300" />
+                </div>
+                <div className="space-y-1.5">
+                  <h3 className="font-bold text-base text-slate-900">
+                    직원에게만 미루지 않는 '대표 세무사 전담 시스템'
+                  </h3>
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    업무 채팅방을 개설하여 대표님과 담당자 및 대표 세무사가 함께 의사소통을 하고 업무 진행 상황을 공유하며 데이터가 자동 백업되므로 대형 세무법인이나 일반 사무소에서 흔히 겪는 직원 잦은 퇴사나 소통 단절 문제를 방지합니다.
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 2 */}
+              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 transition duration-300 flex items-start gap-5">
+                <div className="w-12 h-12 rounded-xl bg-blue-900 text-white flex items-center justify-center shrink-0">
+                  <ShieldCheckIcon className="w-6 h-6 text-emerald-300" />
+                </div>
+                <div className="space-y-1.5">
+                  <h3 className="font-bold text-base text-slate-900">
+                    세무조사 위험을 사전에 차단하는 '선제적 모니터링'
+                  </h3>
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    세무 문제는 사후 대처보다 사전 방어가 중요합니다. 정기적인 매출·매입 비율 분석과 업종별 소득률 검토로 과세관청의 소명 요구를 미연에 방지합니다.
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 3 */}
+              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 transition duration-300 flex items-start gap-5">
+                <div className="w-12 h-12 rounded-xl bg-blue-900 text-white flex items-center justify-center shrink-0">
+                  <CalculatorIcon className="w-6 h-6 text-cyan-300" />
+                </div>
+                <div className="space-y-1.5">
+                  <h3 className="font-bold text-base text-slate-900">
+                    20년 실무 경력의 '깊이 있는 절세 노하우와 전문성'
+                  </h3>
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    20년간 축적된 폭넓은 세무·회계 실무 경험과 세법에 대한 깊이 있는 이해를 바탕으로, 복잡한 세무 현안에도 빈틈없고 명쾌한 맞춤형 절세 해법을 제시합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          4. AUTHOR & CREDIBILITY SHOWCASE (베스트셀러 저자 & 공신력)
+      ========================================================= */}
+      <section className="py-20 bg-white border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold tracking-wide">
@@ -201,163 +358,6 @@ export default function HomePage() {
               </div>
               <div className="pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-amber-700 group-hover:text-amber-900">
                 <span>정책적 혜안과 실무의 결합</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================
-          3. CORE SERVICES GRID (다인 스타일 6대 전문 서비스)
-      ========================================================= */}
-      <section className="py-24 bg-slate-50" id="services">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
-            <div className="space-y-3">
-              <span className="text-blue-700 font-bold text-xs uppercase tracking-wider">
-                태윤 맞춤 세무 서비스
-              </span>
-              <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-                사업과 자산에 꼭 필요한 <br className="hidden sm:inline" />
-                <span className="text-blue-900">3대 핵심 전문 세무 서비스</span>
-              </h2>
-            </div>
-            <p className="text-slate-600 text-sm max-w-md">
-              사업자 세무 관리부터 부동산 특화 세무, 상속·증여·양도까지 각 분야별 체계적인 시스템으로 세무 리스크를 방어합니다.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {siteConfig.services.map((srv, idx) => (
-              <div
-                key={srv.id}
-                className="rounded-2xl p-7 transition-all duration-300 flex flex-col justify-between bg-white border border-slate-200/90 shadow-xs hover:shadow-lg"
-              >
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <span className="w-10 h-10 rounded-xl bg-blue-50 text-blue-900 font-black text-sm flex items-center justify-center border border-blue-100">
-                      0{idx + 1}
-                    </span>
-                    <h3 className="font-bold text-lg text-slate-900 tracking-tight">
-                      {srv.title}
-                    </h3>
-                  </div>
-
-                  <p className="text-blue-900 font-semibold text-sm">
-                    "{srv.summary}"
-                  </p>
-
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    {srv.desc}
-                  </p>
-
-                  <ul className="space-y-2 pt-3 border-t border-slate-100">
-                    {srv.highlights.map((h, i) => (
-                      <li key={i} className="flex items-center gap-2 text-xs text-slate-700">
-                        <CheckCircleIcon className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-                        <span>{h}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
-                  <Link
-                    href={srv.href}
-                    className="text-xs font-bold text-blue-900 hover:text-blue-700 flex items-center gap-1 transition"
-                  >
-                    <span>상세 서비스 안내</span>
-                    <ArrowRightIcon className="w-3.5 h-3.5" />
-                  </Link>
-                  <a
-                    href={siteConfig.kakaoChannelUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[11px] font-semibold text-[#191919] bg-[#FEE500] hover:bg-[#FADA0A] px-2.5 py-1 rounded-md transition"
-                  >
-                    카톡 문의
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================
-          4. WHY TAEYUN (차별화된 3대 강점)
-      ========================================================= */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-5 space-y-6">
-              <span className="text-blue-700 font-bold text-xs uppercase tracking-wider">
-                태윤을 선택하는 이유
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                왜 수많은 사업자와 <br />
-                자산가가 <span className="text-blue-900">태윤세무회계</span>를 선택할까요?
-              </h2>
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                세무는 단순히 과거의 영수증을 모아 세금을 신고하는 일이 아닙니다.
-                사업의 리스크를 사전에 예방하고, 합법적인 테두리 안에서 기업의 이익을 극대화하는 종합 재무 전략입니다.
-              </p>
-
-              <div className="pt-2">
-                <Link
-                  href="/accountant"
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-900 text-white font-semibold text-sm hover:bg-slate-800 transition"
-                >
-                  <span>대표 회계사 소개 더보기</span>
-                  <ArrowRightIcon className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-
-            <div className="lg:col-span-7 space-y-4">
-              {/* Feature 1 */}
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 transition duration-300 flex items-start gap-5">
-                <div className="w-12 h-12 rounded-xl bg-blue-900 text-white flex items-center justify-center shrink-0">
-                  <AwardIcon className="w-6 h-6 text-amber-300" />
-                </div>
-                <div className="space-y-1.5">
-                  <h3 className="font-bold text-base text-slate-900">
-                    직원에게만 미루지 않는 '대표 세무사 전담 시스템'
-                  </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    업무 채팅방을 개설하여 대표님과 담당자 및 대표 세무사가 함께 의사소통을 하고 업무 진행 상황을 공유하며 데이터가 자동 백업되므로 대형 세무법인이나 일반 사무소에서 흔히 겪는 직원 잦은 퇴사나 소통 단절 문제를 방지합니다.
-                  </p>
-                </div>
-              </div>
-
-              {/* Feature 2 */}
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 transition duration-300 flex items-start gap-5">
-                <div className="w-12 h-12 rounded-xl bg-blue-900 text-white flex items-center justify-center shrink-0">
-                  <ShieldCheckIcon className="w-6 h-6 text-emerald-300" />
-                </div>
-                <div className="space-y-1.5">
-                  <h3 className="font-bold text-base text-slate-900">
-                    세무조사 위험을 사전에 차단하는 '선제적 모니터링'
-                  </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    세무 문제는 사후 대처보다 사전 방어가 중요합니다. 정기적인 매출·매입 비율 분석과 업종별 소득률 검토로 과세관청의 소명 요구를 미연에 방지합니다.
-                  </p>
-                </div>
-              </div>
-
-              {/* Feature 3 */}
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 transition duration-300 flex items-start gap-5">
-                <div className="w-12 h-12 rounded-xl bg-blue-900 text-white flex items-center justify-center shrink-0">
-                  <CalculatorIcon className="w-6 h-6 text-cyan-300" />
-                </div>
-                <div className="space-y-1.5">
-                  <h3 className="font-bold text-base text-slate-900">
-                    20년 실무 경력의 '깊이 있는 절세 노하우와 전문성'
-                  </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    20년간 축적된 폭넓은 세무·회계 실무 경험과 세법에 대한 깊이 있는 이해를 바탕으로, 복잡한 세무 현안에도 빈틈없고 명쾌한 맞춤형 절세 해법을 제시합니다.
-                  </p>
-                </div>
               </div>
             </div>
           </div>
