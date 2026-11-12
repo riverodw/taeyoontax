@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: "태윤세무회계 | 오동욱 공인회계사 · 세무사",
     template: "%s | 태윤세무회계"
   },
-  description: "20년의 세무 경험과 전문성으로 최적의 절세 방안을 제시해드리겠습니다.",
+  description: "풍부한 세무 경험과 전문성으로 최적의 절세 방안을 제시해드리겠습니다.",
   keywords: [
     "태윤세무회계",
     "오동욱 세무사",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   creator: "태윤세무회계",
   openGraph: {
     title: "태윤세무회계 | 20년 경력 오동욱 공인회계사 · 세무사",
-    description: "20년의 세무 경험과 전문성으로 최적의 절세 방안을 제시해드리겠습니다.",
+    description: "풍부한 세무 경험과 전문성으로 최적의 절세 방안을 제시해드리겠습니다.",
     url: "https://taeyoontax.com",
     siteName: "태윤세무회계",
     locale: "ko_KR",
