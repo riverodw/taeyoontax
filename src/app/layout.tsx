@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: "태윤세무회계 | 오동욱 공인회계사 · 세무사",
     template: "%s | 태윤세무회계"
   },
-  description: "부산 연제구 법원·거제역 위치 태윤세무회계. 20년 경력의 공인회계사·세무사이자 베스트셀러 저자가 직접 상담하는 부동산 세무, 상속·증여·양도, 법인전환 및 기장대리 전문 세무회계사무소.",
+  description: "20년의 세무 경험과 전문성으로 최적의 절세 방안을 제시해드리겠습니다.",
   keywords: [
     "태윤세무회계",
     "오동욱 세무사",
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   creator: "태윤세무회계",
   openGraph: {
     title: "태윤세무회계 | 20년 경력 오동욱 공인회계사 · 세무사",
-    description: "부동산 세무 베스트셀러 저자의 독보적인 절세 전략. 부산 연제구 월드컵대로 225-1 우일빌딩 5층.",
-    url: "https://taeyuntax.com",
+    description: "20년의 세무 경험과 전문성으로 최적의 절세 방안을 제시해드리겠습니다.",
+    url: "https://taeyoontax.com",
     siteName: "태윤세무회계",
     locale: "ko_KR",
     type: "website",
