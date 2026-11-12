@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/og-image.png",
+        url: "/images/og-banner-v3.png",
         width: 1200,
         height: 630,
         alt: "태윤세무회계 | 오동욱 공인회계사 · 세무사",
