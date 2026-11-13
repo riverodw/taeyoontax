@@ -3,7 +3,8 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import {
   CheckCircleIcon,
-  KakaoIcon
+  KakaoIcon,
+  ArrowRightIcon
 } from "@/components/ui/icons";
 
 export const metadata = {
@@ -87,6 +88,16 @@ export default function BusinessTaxPage() {
                 </p>
               </div>
             </div>
+
+            <div className="pt-2 flex justify-end">
+              <Link
+                href="/pricing#bookkeeping"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-900 border border-blue-200 font-bold text-xs sm:text-sm transition shadow-xs"
+              >
+                <span>세무기장 보수 기준 확인하기 (비용안내)</span>
+                <ArrowRightIcon className="w-4 h-4 text-blue-700" />
+              </Link>
+            </div>
           </div>
 
           {/* PART 02: 세금 신고대리 */}
@@ -139,6 +150,16 @@ export default function BusinessTaxPage() {
                   재무제표 결산 확정과 법인세법상 세무조정계산서 작성을 수행하며, 창업중소기업 세액감면·중소기업 특별세액감면 등을 꼼꼼하게 적용합니다.
                 </p>
               </div>
+            </div>
+
+            <div className="pt-2 flex justify-end">
+              <Link
+                href="/pricing#filing"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-900 border border-blue-200 font-bold text-xs sm:text-sm transition shadow-xs"
+              >
+                <span>세금 신고대행 수수료 확인하기 (비용안내)</span>
+                <ArrowRightIcon className="w-4 h-4 text-blue-700" />
+              </Link>
             </div>
           </div>
 
