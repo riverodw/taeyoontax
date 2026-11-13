@@ -80,24 +80,10 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-8 space-y-6 lg:pl-6 lg:border-l lg:border-slate-200">
+                <div className="lg:col-span-8 flex items-center lg:pl-6 lg:border-l lg:border-slate-200">
                   <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
                     {service.desc}
                   </p>
-
-                  <div className="space-y-3">
-                    <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                      주요 업무 범위 및 절세 포인트
-                    </h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                      {service.highlights.map((item, i) => (
-                        <div key={i} className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/60 text-xs text-slate-800 flex items-start gap-2">
-                          <CheckCircleIcon className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
-                          <span className="font-medium leading-snug">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

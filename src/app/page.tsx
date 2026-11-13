@@ -136,15 +136,6 @@ export default function HomePage() {
                   <p className="text-slate-600 text-sm leading-relaxed">
                     {srv.desc}
                   </p>
-
-                  <ul className="space-y-2 pt-3 border-t border-slate-100">
-                    {srv.highlights.map((h, i) => (
-                      <li key={i} className="flex items-center gap-2 text-xs text-slate-700">
-                        <CheckCircleIcon className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-                        <span>{h}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
 
                 <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
