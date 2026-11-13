@@ -19,6 +19,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://taeyoontax.com"),
+  alternates: {
+    canonical: "https://taeyoontax.com",
+  },
   title: {
     default: "태윤세무회계 | 오동욱 공인회계사 · 세무사",
     template: "%s | 태윤세무회계"
@@ -42,6 +45,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "오동욱 공인회계사 · 세무사" }],
   creator: "태윤세무회계",
+  verification: {
+    other: {
+      "naver-site-verification": "47f695541bdf1e60dda2bcb620a25e4b7245e459",
+    },
+  },
   openGraph: {
     title: "태윤세무회계 | 20년 경력 오동욱 공인회계사 · 세무사",
     description: "풍부한 세무 경험과 전문성으로 최적의 절세 방안을 제시해드리겠습니다.",
