@@ -147,20 +147,29 @@ export default function AccountantPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {profile.books.map((b, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 space-y-5 flex flex-col justify-between"
+                className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 space-y-5 flex flex-col justify-between group"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <span className="px-3 py-1 rounded-full bg-blue-100 text-blue-900 text-xs font-bold">
                       {b.badge}
                     </span>
+                    <BookOpenIcon className="w-5 h-5 text-blue-600" />
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-black text-slate-900 leading-snug">
+                  <div className="h-72 rounded-2xl bg-slate-100/80 border border-slate-200/70 p-4 flex items-center justify-center overflow-hidden">
+                    <img
+                      src={b.image}
+                      alt={`${b.title} 표지`}
+                      className="h-full w-auto object-contain rounded shadow-md group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  <h3 className="text-lg sm:text-xl font-black text-slate-900 leading-snug">
                     《{b.title}》
                   </h3>
 
@@ -175,22 +184,42 @@ export default function AccountantPage() {
                 </div>
               </div>
             ))}
-          </div>
 
-          {/* 국토연구원 공동연구 섹션 */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-slate-900 text-white space-y-4 shadow-xl" id="research">
-            <div className="flex items-center gap-2">
-              <AwardIcon className="w-5 h-5 text-amber-400" />
-              <span className="text-xs font-bold text-amber-400 uppercase tracking-wider">
-                국책연구과제 공동연구 참여
-              </span>
+            {/* 국토연구원 공동연구 카드 */}
+            <div
+              id="research"
+              className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 space-y-5 flex flex-col justify-between group"
+            >
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold">
+                    국책연구기관 공동연구
+                  </span>
+                  <AwardIcon className="w-5 h-5 text-amber-600" />
+                </div>
+
+                <div className="h-72 rounded-2xl bg-slate-100/80 border border-slate-200/70 p-4 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/images/book-krihs-research.png"
+                    alt="부동산시장 안정을 위한 정책과제와 대응 국토연구원 보고서 표지"
+                    className="h-full w-auto object-contain rounded shadow-md bg-white group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                <h3 className="text-lg sm:text-xl font-black text-slate-900 leading-snug">
+                  국토연구원 공동연구 참여
+                </h3>
+
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  국책연구기관인 국토연구원의 «부동산 시장 안정을 위한 정책과제와 대응 방안» 연구보고서 공동 집필에 참여하여, 국가적 부동산 세제 및 시장 메커니즘을 심도 있게 분석하고 정책적 혜안을 제공하였습니다.
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-amber-800">
+                <span>국토연구원 (KRIHS)</span>
+                <span className="text-slate-400">공동 집필 연구원</span>
+              </div>
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold">
-              국토연구원 (KRIHS) 부동산 시장 안정 정책과제 공동연구
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-3xl">
-              국책연구기관인 국토연구원의 «부동산 시장 안정을 위한 정책과제와 대응 방안» 연구보고서 공동 집필에 참여하여, 국가적 부동산 세제 및 시장 메커니즘을 심도 있게 분석하고 정책적 혜안을 제공하였습니다.
-            </p>
           </div>
         </div>
       </section>

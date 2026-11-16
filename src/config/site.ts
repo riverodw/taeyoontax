@@ -49,12 +49,14 @@ export const siteConfig = {
       {
         title: "부동산매매사업자 세금 완전정복",
         desc: "복잡하고 까다로운 부동산 매매사업자의 부가가치세, 종합소득세, 비교과세 체계를 완벽하게 정리한 국내 대표 실전 지침서",
-        badge: "부동산 세무 필독서"
+        badge: "부동산 세무 필독서",
+        image: "/images/book-property-tax.jpg"
       },
       {
         title: "이렇게 쉬운데 왜 부동산절세를 하지 않았을까",
         desc: "양도소득세 비과세·감면부터 증여세 분산, 상속세 방어까지 일반인과 사업자를 위한 쉽고 명쾌한 절세 솔루션",
-        badge: "실전 절세 가이드"
+        badge: "실전 절세 가이드",
+        image: "/images/book-easy-tax.jpg"
       }
     ]
   },
