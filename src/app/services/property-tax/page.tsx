@@ -1,6 +1,6 @@
 import React from "react";
 import BusinessIndustryNav from "@/components/services/BusinessIndustryNav";
-import CommonBusinessTaxSection from "@/components/services/CommonBusinessTaxSection";
+import { BusinessTaxCtaBanner } from "@/components/services/CommonBusinessTaxSection";
 import { ShieldCheckIcon } from "@/components/ui/icons";
 
 export const metadata = {
@@ -157,8 +157,8 @@ export default function PropertyTaxPage() {
             </div>
           </div>
 
-          {/* 하단: 공통 세무기장 및 정기 세금 신고 업무 */}
-          <CommonBusinessTaxSection
+          {/* 하단 문의 배너 */}
+          <BusinessTaxCtaBanner
             ctaBadge="REAL ESTATE BUSINESS CONSULTATION"
             ctaTitle="부동산 임대업 · 매매업 세무 기장 및 신고 문의"
             ctaDescription="매매사업자 및 임대사업자 기장, 매매차익 예정신고, 부가세 조기환급 및 종합소득세·법인세 신고 문의를 남겨주시면 신속히 안내해 드립니다."

@@ -3,10 +3,50 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { ArrowRightIcon, KakaoIcon } from "@/components/ui/icons";
 
-interface CommonBusinessTaxSectionProps {
+export interface BusinessTaxCtaBannerProps {
   ctaBadge?: string;
   ctaTitle?: string;
   ctaDescription?: string;
+}
+
+export function BusinessTaxCtaBanner({
+  ctaBadge = "BUSINESS TAX CONSULTATION",
+  ctaTitle = "세무기장 및 세금 신고대리 문의",
+  ctaDescription = "신규 사업자 기장, 기장 세무사 변경, 부가세·종합소득세·법인세 신고 등 궁금하신 점을 편하게 남겨주세요."
+}: BusinessTaxCtaBannerProps) {
+  return (
+    <div className="p-8 rounded-3xl bg-slate-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+      <div className="space-y-2">
+        <span className="text-xs font-bold text-blue-400 uppercase tracking-wider">
+          {ctaBadge}
+        </span>
+        <h3 className="text-xl sm:text-2xl font-bold">{ctaTitle}</h3>
+        <p className="text-xs sm:text-sm text-slate-300">{ctaDescription}</p>
+      </div>
+      <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
+        <a
+          href={siteConfig.kakaoChannelUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-3.5 rounded-xl bg-[#FEE500] hover:bg-[#FADA0A] text-[#191919] font-bold text-sm transition shadow-lg flex items-center gap-2"
+        >
+          <KakaoIcon className="w-4 h-4" />
+          <span>카카오톡 채널 문의</span>
+        </a>
+        <a
+          href={siteConfig.naverFormUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition"
+        >
+          상담 신청
+        </a>
+      </div>
+    </div>
+  );
+}
+
+interface CommonBusinessTaxSectionProps extends BusinessTaxCtaBannerProps {
   sectionLabel?: string;
   showSectionIntro?: boolean;
 }
@@ -161,34 +201,11 @@ export default function CommonBusinessTaxSection({
       </div>
 
       {/* 하단 문의 배너 */}
-      <div className="p-8 rounded-3xl bg-slate-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
-        <div className="space-y-2">
-          <span className="text-xs font-bold text-blue-400 uppercase tracking-wider">
-            {ctaBadge}
-          </span>
-          <h3 className="text-xl sm:text-2xl font-bold">{ctaTitle}</h3>
-          <p className="text-xs sm:text-sm text-slate-300">{ctaDescription}</p>
-        </div>
-        <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
-          <a
-            href={siteConfig.kakaoChannelUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3.5 rounded-xl bg-[#FEE500] hover:bg-[#FADA0A] text-[#191919] font-bold text-sm transition shadow-lg flex items-center gap-2"
-          >
-            <KakaoIcon className="w-4 h-4" />
-            <span>카카오톡 채널 문의</span>
-          </a>
-          <a
-            href={siteConfig.naverFormUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition"
-          >
-            상담 신청
-          </a>
-        </div>
-      </div>
+      <BusinessTaxCtaBanner
+        ctaBadge={ctaBadge}
+        ctaTitle={ctaTitle}
+        ctaDescription={ctaDescription}
+      />
     </div>
   );
 }

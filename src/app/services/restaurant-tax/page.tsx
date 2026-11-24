@@ -1,6 +1,6 @@
 import React from "react";
 import BusinessIndustryNav from "@/components/services/BusinessIndustryNav";
-import CommonBusinessTaxSection from "@/components/services/CommonBusinessTaxSection";
+import { BusinessTaxCtaBanner } from "@/components/services/CommonBusinessTaxSection";
 import { ShieldCheckIcon } from "@/components/ui/icons";
 
 export const metadata = {
@@ -157,8 +157,8 @@ export default function RestaurantTaxPage() {
             </div>
           </div>
 
-          {/* 하단: 공통 세무기장 및 정기 세금 신고 업무 */}
-          <CommonBusinessTaxSection
+          {/* 하단 문의 배너 */}
+          <BusinessTaxCtaBanner
             ctaBadge="RESTAURANT & CAFE CONSULTATION"
             ctaTitle="식당 · 카페 세무기장 및 창업 절세 문의"
             ctaDescription="신규 오픈 부가세 환급, 의제매입세액공제, 창업세액감면 및 매장 세무기장 문의를 남겨주시면 신속히 안내해 드립니다."
