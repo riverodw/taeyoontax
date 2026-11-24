@@ -1,15 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import {
-  CheckCircleIcon,
-  KakaoIcon,
-  ArrowRightIcon
-} from "@/components/ui/icons";
+import BusinessIndustryNav from "@/components/services/BusinessIndustryNav";
+import CommonBusinessTaxSection from "@/components/services/CommonBusinessTaxSection";
+import { ArrowRightIcon } from "@/components/ui/icons";
 
 export const metadata = {
-  title: "사업자 세무 | 세무기장 대리 · 세금 신고대리 · 부동산 임대·매매업",
-  description: "태윤세무회계 사업자 세무 서비스. 법인 및 개인사업자 장부 기장대리, 부가가치세·종합소득세·법인세 신고대리, 원천세·4대보험 관리, 부동산 임대업·매매업 세무."
+  title: "사업자 세무 | 업종별 특화 세무 · 세무기장 · 신고대리",
+  description: "태윤세무회계 사업자 세무 서비스. 부동산 임대업·매매업, 병원·동물병원, 식당·카페, 학원 등 업종별 특화 세무와 법인·개인사업자 세무기장 및 신고대리."
 };
 
 export default function BusinessTaxPage() {
@@ -25,226 +23,69 @@ export default function BusinessTaxPage() {
             </span>
             <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
               사업자 세무 <br />
-              <span className="text-blue-400">(세무기장 · 신고대리 · 부동산 사업자)</span>
+              <span className="text-blue-400">업종별 특화 관리 · 기장 · 신고</span>
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              법인 및 개인사업자의 사업자등록부터 체계적인 장부 기장대리, 부가가치세·종합소득세·법인세 신고대리, 원천세 및 4대보험 관리는 물론 부동산 임대업·매매업 특화 세무까지 폭넓게 지원합니다.
+              부동산 임대업·매매업, 병원·동물병원, 식당·카페, 학원 등 업종마다 달라지는 핵심 세무 쟁점을 정밀 관리하고, 법인·개인사업자의 월별 세무기장과 정기 세금 신고를 책임지고 수행합니다.
             </p>
           </div>
         </div>
       </section>
 
+      <BusinessIndustryNav />
+
       {/* 본문 콘텐츠 */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 space-y-20">
-          {/* PART 01: 세무기장 대리 */}
-          <div id="bookkeeping" className="space-y-8 scroll-mt-24">
+          {/* 상단: 업종별 특화 세무 안내 (4대 핵심 업종) */}
+          <div className="space-y-8">
             <div className="space-y-2 border-b border-slate-200 pb-4">
               <span className="text-blue-700 font-bold text-xs uppercase tracking-wider">
-                PART 01. BOOKKEEPING
+                INDUSTRY SPECIALTIES
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                세무기장 대리 (법인 · 개인사업자)
+                업종별 특화 세무 안내
               </h2>
               <p className="text-slate-600 text-sm">
-                매월 발생하는 거래 증빙과 인건비를 체계적으로 관리하여 정확한 재무제표 작성과 절세를 지원합니다.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
-                <h3 className="font-bold text-base text-slate-900">
-                  사업자등록 및 설립 지원
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  창업 업종별 인허가 요건 및 창업중소기업 세액감면 대상 여부를 사전 검토하여 유리한 사업자등록을 지원합니다.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
-                <h3 className="font-bold text-base text-slate-900">
-                  장부 기장대리 및 부가가치세 신고
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  매월 발생하는 전자세금계산서, 신용카드, 현금영수증 등 매입·매출 자료를 체계적으로 기장하고 부가가치세 신고를 진행합니다.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
-                <h3 className="font-bold text-base text-slate-900">
-                  종합소득세 · 법인세 신고
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  기장 장부를 바탕으로 결산 및 세무조정을 수행하며, 업종별 적용 가능한 각종 세액공제·감면을 반영하여 종합소득세 및 법인세를 신고합니다.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
-                <h3 className="font-bold text-base text-slate-900">
-                  임직원 급여 · 원천세 · 4대보험
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  임직원 급여대장 작성, 매월 원천징수이행상황신고, 일용직·사업소득 지급명세서 제출 및 4대보험 취득·상실 신고를 대행합니다.
-                </p>
-              </div>
-            </div>
-
-            <div className="pt-2 flex justify-end">
-              <Link
-                href="/pricing#bookkeeping"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-900 border border-blue-200 font-bold text-xs sm:text-sm transition shadow-xs"
-              >
-                <span>세무기장 보수 기준 확인하기 (비용안내)</span>
-                <ArrowRightIcon className="w-4 h-4 text-blue-700" />
-              </Link>
-            </div>
-          </div>
-
-          {/* PART 02: 세금 신고대리 */}
-          <div id="filing" className="space-y-8 scroll-mt-24">
-            <div className="space-y-2 border-b border-slate-200 pb-4">
-              <span className="text-blue-700 font-bold text-xs uppercase tracking-wider">
-                PART 02. TAX FILING
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                세금 신고대리 (부가가치세 · 종합소득세 · 법인세)
-              </h2>
-              <p className="text-slate-600 text-sm">
-                법정 신고 기한에 맞춰 업종별 필요경비와 세액공제·감면 요건을 면밀히 검토하여 정확한 세금 신고를 대행합니다.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="p-7 rounded-2xl bg-blue-50/50 border border-blue-200 space-y-3">
-                <span className="px-2.5 py-1 rounded bg-blue-900 text-white text-xs font-bold inline-block">
-                  부가가치세 신고대리
-                </span>
-                <h3 className="font-bold text-lg text-slate-900">
-                  개인 · 법인 부가가치세 신고
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                  일반과세자, 간이과세자 및 법인사업자의 부가가치세 확정·예정 신고를 대행하며, 공제 가능한 매입세액이 누락되지 않도록 철저히 점검합니다.
-                </p>
-              </div>
-
-              <div className="p-7 rounded-2xl bg-blue-50/50 border border-blue-200 space-y-3">
-                <span className="px-2.5 py-1 rounded bg-emerald-800 text-white text-xs font-bold inline-block">
-                  종합소득세 신고대리
-                </span>
-                <h3 className="font-bold text-lg text-slate-900">
-                  5월 종합소득세 확정신고
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                  단순·기준경비율 추계신고 대상자부터 간편장부, 복식부기 의무자까지 소득 유형에 맞는 신고 방식을 적용하고 각종 소득·세액공제를 반영합니다.
-                </p>
-              </div>
-
-              <div className="p-7 rounded-2xl bg-blue-50/50 border border-blue-200 space-y-3">
-                <span className="px-2.5 py-1 rounded bg-amber-700 text-white text-xs font-bold inline-block">
-                  법인세 신고대리
-                </span>
-                <h3 className="font-bold text-lg text-slate-900">
-                  3월 법인세 결산 및 세무조정
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                  재무제표 결산 확정과 법인세법상 세무조정계산서 작성을 수행하며, 창업중소기업 세액감면·중소기업 특별세액감면 등을 꼼꼼하게 적용합니다.
-                </p>
-              </div>
-            </div>
-
-            <div className="pt-2 flex justify-end">
-              <Link
-                href="/pricing#filing"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-900 border border-blue-200 font-bold text-xs sm:text-sm transition shadow-xs"
-              >
-                <span>세금 신고대행 수수료 확인하기 (비용안내)</span>
-                <ArrowRightIcon className="w-4 h-4 text-blue-700" />
-              </Link>
-            </div>
-          </div>
-
-          {/* PART 03: 부동산 임대업 · 매매업 특화 세무 */}
-          <div id="property" className="space-y-8 scroll-mt-24">
-            <div className="space-y-2 border-b border-slate-200 pb-4">
-              <span className="text-blue-700 font-bold text-xs uppercase tracking-wider">
-                PART 03. REAL ESTATE BUSINESS TAX
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                부동산 임대업 · 매매업 특화 세무
-              </h2>
-              <p className="text-slate-600 text-sm">
-                《부동산매매사업자 세금 완전정복》 저자의 실무 전문성을 바탕으로 매매사업자와 임대사업자의 세무를 정밀하게 관리합니다.
+                해당 업종을 선택하시면 업종 특유의 필수 세무 체크포인트와 절세 전략을 상세히 확인하실 수 있습니다.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="p-7 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
-                <span className="px-2.5 py-1 rounded bg-blue-900 text-white text-xs font-bold inline-block">
-                  부동산 매매사업자
-                </span>
-                <h3 className="font-bold text-lg text-slate-900">
-                  매매차익 예정신고 · 비교과세 검토 · 기장 관리
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  부동산 취득·보유·매도 과정에서 발생하는 대출이자, 인테리어비, 명도비 등 필요경비를 체계적으로 기장하고 토지등 매매차익 예정신고 및 비교과세 규정을 정밀 검토합니다.
-                </p>
-              </div>
+              {siteConfig.businessTaxIndustries.map((industry, idx) => (
+                <Link
+                  key={industry.id}
+                  href={industry.href}
+                  className="p-7 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-400 hover:bg-blue-50/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-5 group"
+                >
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="px-2.5 py-1 rounded bg-blue-900 text-white text-xs font-bold">
+                        {industry.badge}
+                      </span>
+                      <span className="text-xs font-black text-slate-400">
+                        0{idx + 1}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-extrabold text-slate-900 group-hover:text-blue-900 transition">
+                      {industry.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                      {industry.summary}
+                    </p>
+                  </div>
 
-              <div className="p-7 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
-                <span className="px-2.5 py-1 rounded bg-emerald-800 text-white text-xs font-bold inline-block">
-                  부동산 임대사업자
-                </span>
-                <h3 className="font-bold text-lg text-slate-900">
-                  상가 · 오피스텔 · 주택 임대사업자 기장 및 신고
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  건물분 부가가치세 조기환급, 포괄양수도 계약 검토, 간주임대료 신고는 물론 주택임대사업자 사업장현황신고 및 임대소득세·종부세 세제 혜택을 꼼꼼히 관리합니다.
-                </p>
-              </div>
-            </div>
-
-            <div className="pt-2 flex justify-end">
-              <Link
-                href="/services/property-tax"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-900 border border-blue-200 font-bold text-xs sm:text-sm transition shadow-xs"
-              >
-                <span>부동산 임대업 · 매매업 세무 자세히 보기</span>
-                <ArrowRightIcon className="w-4 h-4 text-blue-700" />
-              </Link>
+                  <div className="pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-bold text-blue-900">
+                    <span>{industry.title} 핵심 세무 보기</span>
+                    <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
 
-          {/* 하단 문의 배너 */}
-          <div className="p-8 rounded-3xl bg-slate-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
-            <div className="space-y-2">
-              <span className="text-xs font-bold text-blue-400 uppercase tracking-wider">
-                BUSINESS TAX CONSULTATION
-              </span>
-              <h3 className="text-xl sm:text-2xl font-bold">
-                세무기장 및 세금 신고대리 문의
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-300">
-                신규 사업자 기장, 기장 세무사 변경, 부가세·종합소득세·법인세 신고 등 궁금하신 점을 편하게 남겨주세요.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
-              <a
-                href={siteConfig.kakaoChannelUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3.5 rounded-xl bg-[#FEE500] hover:bg-[#FADA0A] text-[#191919] font-bold text-sm transition shadow-lg flex items-center gap-2"
-              >
-                <KakaoIcon className="w-4 h-4" />
-                <span>카카오톡 채널 문의</span>
-              </a>
-              <Link
-                href="/contact"
-                className="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition"
-              >
-                상담 신청
-              </Link>
-            </div>
-          </div>
+          {/* 하단: 공통 세무기장 및 정기 세금 신고 업무 */}
+          <CommonBusinessTaxSection />
         </div>
       </section>
     </div>

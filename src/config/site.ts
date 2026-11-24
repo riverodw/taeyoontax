@@ -17,11 +17,19 @@ export interface ServiceItem {
   desc: string;
   href: string;
   highlights: string[];
-  secondaryLink?: {
+  secondaryLinks?: {
     label: string;
     href: string;
-  };
+  }[];
   isSpecial: boolean;
+}
+
+export interface BusinessIndustryItem {
+  id: string;
+  title: string;
+  badge: string;
+  summary: string;
+  href: string;
 }
 
 export const siteConfig = {
@@ -97,9 +105,10 @@ export const siteConfig = {
       title: "사업자 세무",
       href: "/services/business-tax",
       subItems: [
-        { title: "세무기장 대리", href: "/services/business-tax#bookkeeping" },
-        { title: "세금 신고대리", href: "/services/business-tax#filing" },
-        { title: "부동산 임대업 · 매매업", href: "/services/property-tax" }
+        { title: "부동산 임대업 · 매매업", href: "/services/property-tax" },
+        { title: "병원 · 동물병원", href: "/services/medical-tax" },
+        { title: "식당 · 카페", href: "/services/restaurant-tax" },
+        { title: "학원", href: "/services/academy-tax" }
       ]
     },
     {
@@ -128,23 +137,57 @@ export const siteConfig = {
     }
   ] as NavItem[],
 
+  // 사업자 세무 업종별 특화 4대 분야
+  businessTaxIndustries: [
+    {
+      id: "property-tax",
+      title: "부동산 임대업 · 매매업",
+      badge: "부동산 세무 특화",
+      summary: "매매차익 예정신고, 비교과세 검토, 상가·주택 임대사업자 세무 및 부가세 조기환급",
+      href: "/services/property-tax"
+    },
+    {
+      id: "medical-tax",
+      title: "병원 · 동물병원",
+      badge: "의료 · 수의업 특화",
+      summary: "과·면세 겸영 안분계산, 성실신고확인 대응, 개원 자금·장비 리스 및 진료용역 면세 관리",
+      href: "/services/medical-tax"
+    },
+    {
+      id: "restaurant-tax",
+      title: "식당 · 카페",
+      badge: "외식 · F&B 특화",
+      summary: "의제매입세액공제, 배달앱·POS 매출 대사, 창업중소기업 세액감면 및 인건비 관리",
+      href: "/services/restaurant-tax"
+    },
+    {
+      id: "academy-tax",
+      title: "학원",
+      badge: "교육서비스업 특화",
+      summary: "2월 사업장현황신고, 현금영수증 의무발행 방어, 강사 3.3%·근로소득 구분 및 교재비 관리",
+      href: "/services/academy-tax"
+    }
+  ] as BusinessIndustryItem[],
+
   // 2대 핵심 세무 서비스 상세 목록 (사업자 세무, 상속 · 증여 · 양도)
   services: [
     {
       id: "business-tax",
       title: "사업자 세무",
-      summary: "법인 · 개인사업자 세무기장, 신고대리 및 부동산 임대업 · 매매업 특화 세무",
-      desc: "사업자등록부터 장부 기장대리, 부가가치세·종합소득세·법인세 신고대리, 원천세·4대보험 관리는 물론 부동산 임대사업자·매매사업자의 맞춤형 절세 관리까지 체계적으로 지원합니다.",
+      summary: "업종별 특화 절세 관리부터 법인 · 개인사업자 세무기장 및 신고대리까지",
+      desc: "부동산 임대·매매업, 병원·동물병원, 식당·카페, 학원 등 업종별 핵심 세무 리스크를 정밀 관리하고, 장부 기장대리·부가세·종합소득세·법인세 신고와 원천세·4대보험까지 체계적으로 지원합니다.",
       href: "/services/business-tax",
       highlights: [
+        "부동산 임대업·매매업, 병원·동물병원, 식당·카페, 학원 업종별 특화 세무",
         "법인 · 개인사업자 세무기장 및 원천세 · 4대보험 관리",
-        "부가가치세 · 종합소득세 · 법인세 신고대리",
-        "부동산 매매사업자 · 임대사업자 특화 세무 관리"
+        "부가가치세 · 사업장현황신고 · 종합소득세 · 법인세 신고대리"
       ],
-      secondaryLink: {
-        label: "부동산 임대업 · 매매업 안내",
-        href: "/services/property-tax"
-      },
+      secondaryLinks: [
+        { label: "부동산 임대업 · 매매업", href: "/services/property-tax" },
+        { label: "병원 · 동물병원", href: "/services/medical-tax" },
+        { label: "식당 · 카페", href: "/services/restaurant-tax" },
+        { label: "학원", href: "/services/academy-tax" }
+      ],
       isSpecial: false
     },
     {
