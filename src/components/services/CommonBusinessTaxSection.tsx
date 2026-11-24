@@ -3,6 +3,31 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { ArrowRightIcon, KakaoIcon } from "@/components/ui/icons";
 
+export function BusinessTaxPricingBanner() {
+  return (
+    <div className="p-6 sm:p-7 rounded-3xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="space-y-1">
+        <span className="text-xs font-bold text-blue-700 uppercase tracking-wider">
+          TRANSPARENT PRICING
+        </span>
+        <h3 className="text-lg sm:text-xl font-extrabold text-slate-900">
+          세무기장 · 신고대행 비용이 궁금하신가요?
+        </h3>
+        <p className="text-sm text-slate-600">
+          개인·법인 세무기장 보수 기준과 정기 세금 신고대행 수수료를 투명하게 확인하실 수 있습니다.
+        </p>
+      </div>
+      <Link
+        href="/pricing"
+        className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-900 hover:bg-blue-700 text-white font-extrabold text-sm sm:text-base shadow-md hover:shadow-lg transition"
+      >
+        <span>비용안내 바로가기</span>
+        <ArrowRightIcon className="w-4 h-4" />
+      </Link>
+    </div>
+  );
+}
+
 export interface BusinessTaxCtaBannerProps {
   ctaBadge?: string;
   ctaTitle?: string;

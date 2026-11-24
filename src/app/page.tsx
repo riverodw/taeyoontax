@@ -159,13 +159,13 @@ export default function HomePage() {
                   )}
                 </div>
 
-                <div className="pt-6 mt-8 border-t border-slate-100 flex items-center">
+                <div className="pt-6 mt-8 border-t border-slate-100">
                   <Link
                     href={srv.href}
-                    className="text-sm sm:text-base font-bold text-blue-900 hover:text-blue-700 inline-flex items-center gap-1.5 transition"
+                    className="w-full py-3.5 px-6 rounded-xl bg-blue-900 hover:bg-blue-700 text-white text-base sm:text-lg font-extrabold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
                   >
                     <span>{srv.title} 자세히 보기</span>
-                    <ArrowRightIcon className="w-4 h-4" />
+                    <ArrowRightIcon className="w-5 h-5" />
                   </Link>
                 </div>
               </div>
@@ -255,120 +255,7 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================
-          4. AUTHOR & CREDIBILITY SHOWCASE (베스트셀러 저자 & 공신력)
-      ========================================================= */}
-      <section className="py-20 bg-white border-t border-slate-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold tracking-wide">
-              <BookOpenIcon className="w-3.5 h-3.5" />
-              <span>검증된 전문성과 연구 실적</span>
-            </div>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              세법 전문가들도 찾아 읽는 저서, <br />
-              <span className="text-blue-900">대표 세무사가 직접 집필했습니다.</span>
-            </h2>
-            <p className="text-slate-600 text-sm sm:text-base">
-              오동욱 대표는 오랜 실무와 정책 연구를 바탕으로 복잡한 세법을 체계화한 저서를 출간하였으며, 국책연구기관 공동연구에 참여한 검증된 세무 전문가입니다.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Book 1 */}
-            <div className="rounded-2xl p-6 bg-gradient-to-b from-slate-50 to-white border border-slate-200/80 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="px-2.5 py-1 rounded-md bg-blue-900 text-white text-xs font-bold">
-                    부동산 세무 필독서
-                  </span>
-                  <BookOpenIcon className="w-5 h-5 text-blue-600" />
-                </div>
-                <div className="h-72 rounded-xl bg-slate-100/80 border border-slate-200/70 p-4 flex items-center justify-center overflow-hidden">
-                  <img
-                    src="/images/book-property-tax.jpg"
-                    alt="부동산매매사업자 세금 완전정복 표지"
-                    className="h-full w-auto object-contain rounded shadow-md group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="space-y-1.5 pt-1">
-                  <h3 className="font-bold text-lg text-slate-900 leading-snug">
-                    부동산매매사업자 세금 완전정복
-                  </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    부동산 매매사업자의 비교과세 검토, 부가가치세 및 종합소득세 과세 체계를 현장 실무에 맞춰 완벽히 정리한 국내 대표 전문 지침서입니다.
-                  </p>
-                </div>
-              </div>
-              <div className="pt-4 mt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-blue-700 group-hover:text-blue-900">
-                <span>교보문고 및 주요 서점 출간 도서</span>
-              </div>
-            </div>
-
-            {/* Book 2 */}
-            <div className="rounded-2xl p-6 bg-gradient-to-b from-slate-50 to-white border border-slate-200/80 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="px-2.5 py-1 rounded-md bg-emerald-800 text-white text-xs font-bold">
-                    실전 절세 가이드
-                  </span>
-                  <BookOpenIcon className="w-5 h-5 text-emerald-600" />
-                </div>
-                <div className="h-72 rounded-xl bg-slate-100/80 border border-slate-200/70 p-4 flex items-center justify-center overflow-hidden">
-                  <img
-                    src="/images/book-easy-tax.jpg"
-                    alt="이렇게 쉬운데 왜 부동산절세를 하지 않았을까 표지"
-                    className="h-full w-auto object-contain rounded shadow-md group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="space-y-1.5 pt-1">
-                  <h3 className="font-bold text-lg text-slate-900 leading-snug">
-                    이렇게 쉬운데 왜 부동산절세를 하지 않았을까
-                  </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    양도소득세 1주택 비과세부터 증여세 합산 배제, 상속세 방어까지 누구나 쉽게 이해하고 적용할 수 있는 부동산 절세의 명쾌한 해법을 담았습니다.
-                  </p>
-                </div>
-              </div>
-              <div className="pt-4 mt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-emerald-700 group-hover:text-emerald-900">
-                <span>일반인 및 부동산 투자자 필독서</span>
-              </div>
-            </div>
-
-            {/* Research & Policy */}
-            <div className="rounded-2xl p-6 bg-gradient-to-b from-slate-50 to-white border border-slate-200/80 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="px-2.5 py-1 rounded-md bg-amber-600 text-white text-xs font-bold">
-                    국책연구기관 공동연구
-                  </span>
-                  <AwardIcon className="w-5 h-5 text-amber-600" />
-                </div>
-                <div className="h-72 rounded-xl bg-slate-100/80 border border-slate-200/70 p-4 flex items-center justify-center overflow-hidden">
-                  <img
-                    src="/images/book-krihs-research.png"
-                    alt="부동산시장 안정을 위한 정책과제와 대응 국토연구원 보고서 표지"
-                    className="h-full w-auto object-contain rounded shadow-md bg-white group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="space-y-1.5 pt-1">
-                  <h3 className="font-bold text-lg text-slate-900 leading-snug">
-                    국토연구원 공동연구 참여
-                  </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    대한민국 국토 및 부동산 정책을 선도하는 국책연구기관 국토연구원의 국가적 세제 정책 연구에 직접 참여하여 학술적·정책적 깊이를 인정받았습니다.
-                  </p>
-                </div>
-              </div>
-              <div className="pt-4 mt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-amber-700 group-hover:text-amber-900">
-                <span>정책적 혜안과 실무의 결합</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================
-          6. BLOG SHOWCASE (오회계사의 지식창고 연계)
+          4. BLOG SHOWCASE (오회계사의 지식창고 연계)
       ========================================================= */}
       <section className="py-24 bg-slate-50 border-y border-slate-200/60" id="blog">
         <div className="max-w-7xl mx-auto px-6">

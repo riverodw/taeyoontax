@@ -135,16 +135,21 @@ export default function AccountantPage() {
         </div>
       </section>
 
-      {/* 저서 소개 쇼케이스 */}
+      {/* 저서 소개 및 연구 실적 쇼케이스 */}
       <section className="py-20 bg-slate-50" id="books">
-        <div className="max-w-7xl mx-auto px-6 space-y-12">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-blue-700 font-bold text-xs uppercase tracking-wider">
-              AUTHOR & PUBLICATIONS
-            </span>
+        <div className="max-w-7xl mx-auto px-6 space-y-14">
+          <div className="text-center max-w-2xl mx-auto space-y-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100/80 text-blue-800 text-xs font-bold tracking-wide">
+              <BookOpenIcon className="w-3.5 h-3.5" />
+              <span>검증된 전문성과 연구 실적</span>
+            </div>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              출간 저서 소개
+              세법 전문가들도 찾아 읽는 저서, <br />
+              <span className="text-blue-900">대표 세무사가 직접 집필했습니다.</span>
             </h2>
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+              오동욱 대표는 오랜 실무와 정책 연구를 바탕으로 복잡한 세법을 체계화한 저서를 출간하였으며, 국책연구기관 공동연구에 참여한 검증된 세무 전문가입니다.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -155,10 +160,16 @@ export default function AccountantPage() {
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="px-3 py-1 rounded-full bg-blue-100 text-blue-900 text-xs font-bold">
+                    <span
+                      className={`px-3 py-1 rounded-md text-white text-xs font-bold ${
+                        idx === 0 ? "bg-blue-900" : "bg-emerald-800"
+                      }`}
+                    >
                       {b.badge}
                     </span>
-                    <BookOpenIcon className="w-5 h-5 text-blue-600" />
+                    <BookOpenIcon
+                      className={`w-5 h-5 ${idx === 0 ? "text-blue-600" : "text-emerald-600"}`}
+                    />
                   </div>
 
                   <div className="h-72 rounded-2xl bg-slate-100/80 border border-slate-200/70 p-4 flex items-center justify-center overflow-hidden">
@@ -178,9 +189,13 @@ export default function AccountantPage() {
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-blue-900">
-                  <span>저자: 오동욱 공인회계사</span>
-                  <span className="text-slate-400">교보문고, YES24 등 판매</span>
+                <div
+                  className={`pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold ${
+                    idx === 0 ? "text-blue-900" : "text-emerald-800"
+                  }`}
+                >
+                  <span>{idx === 0 ? "교보문고 및 주요 서점 출간 도서" : "일반인 및 부동산 투자자 필독서"}</span>
+                  <span className="text-slate-400">저자: 오동욱</span>
                 </div>
               </div>
             ))}
@@ -192,7 +207,7 @@ export default function AccountantPage() {
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold">
+                  <span className="px-3 py-1 rounded-md bg-amber-600 text-white text-xs font-bold">
                     국책연구기관 공동연구
                   </span>
                   <AwardIcon className="w-5 h-5 text-amber-600" />
@@ -211,13 +226,13 @@ export default function AccountantPage() {
                 </h3>
 
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  국책연구기관인 국토연구원의 «부동산 시장 안정을 위한 정책과제와 대응 방안» 연구보고서 공동 집필에 참여하여, 국가적 부동산 세제 및 시장 메커니즘을 심도 있게 분석하고 정책적 혜안을 제공하였습니다.
+                  대한민국 국토 및 부동산 정책을 선도하는 국책연구기관 국토연구원의 «부동산 시장 안정을 위한 정책과제와 대응 방안» 연구보고서 공동 집필에 참여하여 학술적·정책적 깊이를 인정받았습니다.
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-amber-800">
-                <span>국토연구원 (KRIHS)</span>
-                <span className="text-slate-400">공동 집필 연구원</span>
+              <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-amber-700">
+                <span>정책적 혜안과 실무의 결합</span>
+                <span className="text-slate-400">국토연구원 (KRIHS)</span>
               </div>
             </div>
           </div>

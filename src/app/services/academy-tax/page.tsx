@@ -1,6 +1,9 @@
 import React from "react";
 import BusinessIndustryNav from "@/components/services/BusinessIndustryNav";
-import { BusinessTaxCtaBanner } from "@/components/services/CommonBusinessTaxSection";
+import {
+  BusinessTaxCtaBanner,
+  BusinessTaxPricingBanner
+} from "@/components/services/CommonBusinessTaxSection";
 import { CheckCircleIcon, ShieldCheckIcon } from "@/components/ui/icons";
 
 export const metadata = {
@@ -68,6 +71,9 @@ export default function AcademyTaxPage() {
               </div>
             </div>
           </div>
+
+          {/* 비용안내 바로가기 */}
+          <BusinessTaxPricingBanner />
 
           {/* 파트 1: 면세 학원 vs 과세 학원(요가·필라테스 등) 구분 설명 */}
           <div className="space-y-8">

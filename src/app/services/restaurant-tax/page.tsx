@@ -1,6 +1,9 @@
 import React from "react";
 import BusinessIndustryNav from "@/components/services/BusinessIndustryNav";
-import { BusinessTaxCtaBanner } from "@/components/services/CommonBusinessTaxSection";
+import {
+  BusinessTaxCtaBanner,
+  BusinessTaxPricingBanner
+} from "@/components/services/CommonBusinessTaxSection";
 import { ShieldCheckIcon } from "@/components/ui/icons";
 
 export const metadata = {
@@ -68,6 +71,9 @@ export default function RestaurantTaxPage() {
               </div>
             </div>
           </div>
+
+          {/* 비용안내 바로가기 */}
+          <BusinessTaxPricingBanner />
 
           {/* 파트 1: 식당 · 카페 부가가치세 절세 핵심 */}
           <div className="space-y-8">
