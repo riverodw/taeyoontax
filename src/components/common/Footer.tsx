@@ -41,20 +41,30 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* 2. 주요 세무 업무 */}
+          {/* 2. 업종별 · 핵심 세무 업무 */}
           <div className="space-y-3">
             <h4 className="text-sm font-semibold text-white tracking-wider uppercase">
               주요 세무 업무
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/services/business-tax" className="hover:text-white transition">
-                  사업자 세무
+                <Link href="/services/property-tax" className="hover:text-white transition">
+                  부동산 임대업 · 매매업
                 </Link>
               </li>
               <li>
-                <Link href="/services/property-tax" className="hover:text-white transition">
-                  부동산 임대업 · 매매업
+                <Link href="/services/medical-tax" className="hover:text-white transition">
+                  병원 · 동물병원
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/restaurant-tax" className="hover:text-white transition">
+                  식당 · 카페
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/academy-tax" className="hover:text-white transition">
+                  학원
                 </Link>
               </li>
               <li>

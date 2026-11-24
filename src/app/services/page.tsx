@@ -92,15 +92,18 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  {service.secondaryLink && (
-                    <div className="pt-1">
-                      <Link
-                        href={service.secondaryLink.href}
-                        className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-800 hover:text-blue-600 transition"
-                      >
-                        <span>{service.secondaryLink.label}</span>
-                        <ArrowRightIcon className="w-3.5 h-3.5" />
-                      </Link>
+                  {service.secondaryLinks && service.secondaryLinks.length > 0 && (
+                    <div className="pt-2 flex flex-wrap gap-2">
+                      {service.secondaryLinks.map((sub) => (
+                        <Link
+                          key={sub.href}
+                          href={sub.href}
+                          className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-blue-900 border border-slate-200 text-xs font-bold transition"
+                        >
+                          <span>{sub.label}</span>
+                          <ArrowRightIcon className="w-3 h-3" />
+                        </Link>
+                      ))}
                     </div>
                   )}
                 </div>
