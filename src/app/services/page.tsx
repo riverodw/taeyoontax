@@ -80,14 +80,11 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-8 space-y-5 lg:pl-6 lg:border-l lg:border-slate-200">
-                  <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                    {service.desc}
-                  </p>
-                  <ul className="space-y-2">
+                <div className="lg:col-span-8 space-y-5 lg:pl-6 lg:border-l lg:border-slate-200 flex flex-col justify-center">
+                  <ul className="space-y-3">
                     {service.highlights.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-sm text-slate-700">
-                        <CheckCircleIcon className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                      <li key={item} className="flex items-start gap-3 text-base sm:text-[17px] font-semibold text-slate-800 leading-snug">
+                        <CheckCircleIcon className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </li>
                     ))}
