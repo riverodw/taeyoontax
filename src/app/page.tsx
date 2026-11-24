@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import KakaoFeedbackSection from "@/components/home/KakaoFeedbackSection";
 import {
   KakaoIcon,
   NaverIcon,
@@ -255,7 +256,12 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================
-          4. BLOG SHOWCASE (오회계사의 지식창고 연계)
+          4. KAKAO CLIENT FEEDBACK (카카오톡 대화 피드백)
+      ========================================================= */}
+      <KakaoFeedbackSection />
+
+      {/* =========================================================
+          5. BLOG SHOWCASE (오회계사의 지식창고 연계)
       ========================================================= */}
       <section className="py-24 bg-slate-50 border-y border-slate-200/60" id="blog">
         <div className="max-w-7xl mx-auto px-6">
