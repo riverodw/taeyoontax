@@ -163,8 +163,8 @@ export const siteConfig = {
     {
       id: "academy-tax",
       title: "학원",
-      badge: "교육서비스업 특화",
-      summary: "2월 사업장현황신고, 현금영수증 의무발행 방어, 강사 3.3%·근로소득 구분 및 교재비 관리",
+      badge: "교육 · 스튜디오 특화",
+      summary: "면세 학원(2월 사업장현황신고)과 요가·필라테스 등 과세 학원(부가세 조기환급) 구분 관리 및 강사 인건비·현금영수증 대응",
       href: "/services/academy-tax"
     }
   ] as BusinessIndustryItem[],
