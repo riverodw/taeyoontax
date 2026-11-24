@@ -80,28 +80,26 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-8 space-y-5 lg:pl-6 lg:border-l lg:border-slate-200 flex flex-col justify-center">
-                  <ul className="space-y-3">
-                    {service.highlights.map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-base sm:text-[17px] font-semibold text-slate-800 leading-snug">
-                        <CheckCircleIcon className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  {service.secondaryLinks && service.secondaryLinks.length > 0 && (
-                    <div className="pt-2 flex flex-wrap gap-2">
+                <div className="lg:col-span-8 lg:pl-6 lg:border-l lg:border-slate-200 flex flex-col justify-center">
+                  {service.secondaryLinks && service.secondaryLinks.length > 0 ? (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                       {service.secondaryLinks.map((sub) => (
                         <Link
                           key={sub.href}
                           href={sub.href}
-                          className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-blue-900 border border-slate-200 text-xs font-bold transition"
+                          className="flex items-center justify-between gap-2 px-5 py-4 rounded-xl bg-slate-50 hover:bg-blue-50 text-slate-900 hover:text-blue-900 border border-slate-200 hover:border-blue-400 shadow-xs hover:shadow-md transition-all group"
                         >
-                          <span>{sub.label}</span>
-                          <ArrowRightIcon className="w-3 h-3" />
+                          <span className="text-base font-extrabold tracking-tight">
+                            {sub.label}
+                          </span>
+                          <ArrowRightIcon className="w-4 h-4 text-blue-700 group-hover:translate-x-0.5 transition-transform shrink-0" />
                         </Link>
                       ))}
                     </div>
+                  ) : (
+                    <p className="text-base sm:text-[17px] text-slate-700 leading-relaxed">
+                      {service.desc}
+                    </p>
                   )}
                 </div>
               </div>
