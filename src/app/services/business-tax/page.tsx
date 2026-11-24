@@ -8,8 +8,8 @@ import {
 } from "@/components/ui/icons";
 
 export const metadata = {
-  title: "사업자 세무 | 세무기장 대리 · 세금 신고대리",
-  description: "태윤세무회계 사업자 세무 서비스. 법인 및 개인사업자 장부 기장대리, 부가가치세·종합소득세·법인세 신고대리, 4대보험·원천세 관리."
+  title: "사업자 세무 | 세무기장 대리 · 세금 신고대리 · 부동산 임대·매매업",
+  description: "태윤세무회계 사업자 세무 서비스. 법인 및 개인사업자 장부 기장대리, 부가가치세·종합소득세·법인세 신고대리, 원천세·4대보험 관리, 부동산 임대업·매매업 세무."
 };
 
 export default function BusinessTaxPage() {
@@ -25,10 +25,10 @@ export default function BusinessTaxPage() {
             </span>
             <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
               사업자 세무 <br />
-              <span className="text-blue-400">(세무기장 · 신고대리)</span>
+              <span className="text-blue-400">(세무기장 · 신고대리 · 부동산 사업자)</span>
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              법인 및 개인사업자의 사업자등록부터 체계적인 장부 기장대리, 부가가치세·종합소득세·법인세 신고대리, 원천세 및 4대보험 관리까지 사업에 필요한 세무 서비스를 제공합니다.
+              법인 및 개인사업자의 사업자등록부터 체계적인 장부 기장대리, 부가가치세·종합소득세·법인세 신고대리, 원천세 및 4대보험 관리는 물론 부동산 임대업·매매업 특화 세무까지 폭넓게 지원합니다.
             </p>
           </div>
         </div>
@@ -38,7 +38,7 @@ export default function BusinessTaxPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 space-y-20">
           {/* PART 01: 세무기장 대리 */}
-          <div className="space-y-8">
+          <div id="bookkeeping" className="space-y-8 scroll-mt-24">
             <div className="space-y-2 border-b border-slate-200 pb-4">
               <span className="text-blue-700 font-bold text-xs uppercase tracking-wider">
                 PART 01. BOOKKEEPING
@@ -101,7 +101,7 @@ export default function BusinessTaxPage() {
           </div>
 
           {/* PART 02: 세금 신고대리 */}
-          <div className="space-y-8">
+          <div id="filing" className="space-y-8 scroll-mt-24">
             <div className="space-y-2 border-b border-slate-200 pb-4">
               <span className="text-blue-700 font-bold text-xs uppercase tracking-wider">
                 PART 02. TAX FILING
@@ -158,6 +158,57 @@ export default function BusinessTaxPage() {
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-900 border border-blue-200 font-bold text-xs sm:text-sm transition shadow-xs"
               >
                 <span>세금 신고대행 수수료 확인하기 (비용안내)</span>
+                <ArrowRightIcon className="w-4 h-4 text-blue-700" />
+              </Link>
+            </div>
+          </div>
+
+          {/* PART 03: 부동산 임대업 · 매매업 특화 세무 */}
+          <div id="property" className="space-y-8 scroll-mt-24">
+            <div className="space-y-2 border-b border-slate-200 pb-4">
+              <span className="text-blue-700 font-bold text-xs uppercase tracking-wider">
+                PART 03. REAL ESTATE BUSINESS TAX
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+                부동산 임대업 · 매매업 특화 세무
+              </h2>
+              <p className="text-slate-600 text-sm">
+                《부동산매매사업자 세금 완전정복》 저자의 실무 전문성을 바탕으로 매매사업자와 임대사업자의 세무를 정밀하게 관리합니다.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="p-7 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+                <span className="px-2.5 py-1 rounded bg-blue-900 text-white text-xs font-bold inline-block">
+                  부동산 매매사업자
+                </span>
+                <h3 className="font-bold text-lg text-slate-900">
+                  매매차익 예정신고 · 비교과세 검토 · 기장 관리
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  부동산 취득·보유·매도 과정에서 발생하는 대출이자, 인테리어비, 명도비 등 필요경비를 체계적으로 기장하고 토지등 매매차익 예정신고 및 비교과세 규정을 정밀 검토합니다.
+                </p>
+              </div>
+
+              <div className="p-7 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+                <span className="px-2.5 py-1 rounded bg-emerald-800 text-white text-xs font-bold inline-block">
+                  부동산 임대사업자
+                </span>
+                <h3 className="font-bold text-lg text-slate-900">
+                  상가 · 오피스텔 · 주택 임대사업자 기장 및 신고
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  건물분 부가가치세 조기환급, 포괄양수도 계약 검토, 간주임대료 신고는 물론 주택임대사업자 사업장현황신고 및 임대소득세·종부세 세제 혜택을 꼼꼼히 관리합니다.
+                </p>
+              </div>
+            </div>
+
+            <div className="pt-2 flex justify-end">
+              <Link
+                href="/services/property-tax"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-900 border border-blue-200 font-bold text-xs sm:text-sm transition shadow-xs"
+              >
+                <span>부동산 임대업 · 매매업 세무 자세히 보기</span>
                 <ArrowRightIcon className="w-4 h-4 text-blue-700" />
               </Link>
             </div>

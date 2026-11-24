@@ -11,8 +11,8 @@ import {
 } from "@/components/ui/icons";
 
 export const metadata = {
-  title: "전문 서비스 안내 | 사업자세무 · 부동산세무 · 상속증여양도",
-  description: "태윤세무회계의 3대 핵심 전문 세무 서비스 라인업. 사업자 세무(기장·신고·법인컨설팅·조사대응), 부동산 세무, 상속·증여·양도."
+  title: "세무 서비스 안내 | 사업자세무 · 상속증여양도",
+  description: "태윤세무회계의 핵심 전문 세무 서비스 라인업. 사업자 세무(기장·신고·부동산 임대·매매업) 및 상속·증여·양도."
 };
 
 export default function ServicesPage() {
@@ -80,10 +80,29 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-8 flex items-center lg:pl-6 lg:border-l lg:border-slate-200">
+                <div className="lg:col-span-8 space-y-5 lg:pl-6 lg:border-l lg:border-slate-200">
                   <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
                     {service.desc}
                   </p>
+                  <ul className="space-y-2">
+                    {service.highlights.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-slate-700">
+                        <CheckCircleIcon className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {service.secondaryLink && (
+                    <div className="pt-1">
+                      <Link
+                        href={service.secondaryLink.href}
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-800 hover:text-blue-600 transition"
+                      >
+                        <span>{service.secondaryLink.label}</span>
+                        <ArrowRightIcon className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

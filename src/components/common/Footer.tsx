@@ -41,10 +41,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* 2. 주요 전문 서비스 */}
+          {/* 2. 주요 세무 업무 */}
           <div className="space-y-3">
             <h4 className="text-sm font-semibold text-white tracking-wider uppercase">
-              전문 서비스
+              주요 세무 업무
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
@@ -54,7 +54,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/services/property-tax" className="hover:text-white transition">
-                  부동산 임대업/매매업
+                  부동산 임대업 · 매매업
                 </Link>
               </li>
               <li>
@@ -73,27 +73,27 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/accountant" className="hover:text-white transition">
-                  대표 회계사 소개
+                  대표 회계사
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white transition">
-                  전문 서비스 안내
+                <Link href="/services/business-tax" className="hover:text-white transition">
+                  사업자 세무
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/inheritance-tax" className="hover:text-white transition">
+                  상속 · 증여 · 양도
                 </Link>
               </li>
               <li>
                 <Link href="/column" className="hover:text-white transition">
-                  오회계사의 세무 칼럼
+                  칼럼
                 </Link>
               </li>
               <li>
                 <Link href="/pricing" className="hover:text-white transition">
-                  투명한 비용안내
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-white transition">
-                  상담 신청
+                  비용안내
                 </Link>
               </li>
               <li>

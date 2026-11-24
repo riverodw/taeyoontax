@@ -94,7 +94,7 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================
-          2. CORE SERVICES GRID (3대 핵심 전문 세무 서비스)
+          2. CORE SERVICES GRID (2대 핵심 세무 서비스: 사업자 세무 / 상속·증여·양도)
       ========================================================= */}
       <section className="py-24 bg-slate-50" id="services">
         <div className="max-w-7xl mx-auto px-6">
@@ -105,26 +105,26 @@ export default function HomePage() {
               </span>
               <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                 사업과 자산에 꼭 필요한 <br className="hidden sm:inline" />
-                <span className="text-blue-900">3대 핵심 전문 세무 서비스</span>
+                <span className="text-blue-900">핵심 세무 서비스</span>
               </h2>
             </div>
             <p className="text-slate-600 text-sm max-w-md">
-              사업자 세무 관리부터 부동산 특화 세무, 상속·증여·양도까지 각 분야별 체계적인 시스템으로 세무 리스크를 방어합니다.
+              사업자 세무(기장·신고·부동산 임대·매매업)부터 상속·증여·양도까지 체계적인 시스템으로 세무 리스크를 방어합니다.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {siteConfig.services.map((srv, idx) => (
               <div
                 key={srv.id}
-                className="rounded-2xl p-7 transition-all duration-300 flex flex-col justify-between bg-white border border-slate-200/90 shadow-xs hover:shadow-lg"
+                className="rounded-2xl p-8 transition-all duration-300 flex flex-col justify-between bg-white border border-slate-200/90 shadow-xs hover:shadow-lg"
               >
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <span className="w-10 h-10 rounded-xl bg-blue-50 text-blue-900 font-black text-sm flex items-center justify-center border border-blue-100">
+                <div className="space-y-5">
+                  <div className="flex items-center gap-3.5">
+                    <span className="w-11 h-11 rounded-xl bg-blue-50 text-blue-900 font-black text-sm flex items-center justify-center border border-blue-100">
                       0{idx + 1}
                     </span>
-                    <h3 className="font-bold text-lg text-slate-900 tracking-tight">
+                    <h3 className="font-extrabold text-xl text-slate-900 tracking-tight">
                       {srv.title}
                     </h3>
                   </div>
@@ -136,21 +136,41 @@ export default function HomePage() {
                   <p className="text-slate-600 text-sm leading-relaxed">
                     {srv.desc}
                   </p>
+
+                  <ul className="space-y-2.5 pt-2 border-t border-slate-100">
+                    {srv.highlights.map((item) => (
+                      <li key={item} className="flex items-start gap-2.5 text-sm text-slate-700">
+                        <CheckCircleIcon className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
-                  <Link
-                    href={srv.href}
-                    className="text-xs font-bold text-blue-900 hover:text-blue-700 flex items-center gap-1 transition"
-                  >
-                    <span>상세 서비스 안내</span>
-                    <ArrowRightIcon className="w-3.5 h-3.5" />
-                  </Link>
+                <div className="pt-6 mt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
+                  <div className="flex flex-wrap items-center gap-4">
+                    <Link
+                      href={srv.href}
+                      className="text-sm font-bold text-blue-900 hover:text-blue-700 flex items-center gap-1 transition"
+                    >
+                      <span>{srv.title} 자세히 보기</span>
+                      <ArrowRightIcon className="w-4 h-4" />
+                    </Link>
+                    {srv.secondaryLink && (
+                      <Link
+                        href={srv.secondaryLink.href}
+                        className="text-xs font-semibold text-slate-600 hover:text-blue-900 flex items-center gap-1 transition"
+                      >
+                        <span>{srv.secondaryLink.label}</span>
+                        <ChevronRightIcon className="w-3.5 h-3.5" />
+                      </Link>
+                    )}
+                  </div>
                   <a
                     href={siteConfig.kakaoChannelUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[11px] font-semibold text-[#191919] bg-[#FEE500] hover:bg-[#FADA0A] px-2.5 py-1 rounded-md transition"
+                    className="text-xs font-semibold text-[#191919] bg-[#FEE500] hover:bg-[#FADA0A] px-3 py-1.5 rounded-lg transition"
                   >
                     카톡 문의
                   </a>

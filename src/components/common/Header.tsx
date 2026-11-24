@@ -71,10 +71,14 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* 데스크톱 메뉴 (6대 메뉴: 대표 회계사, 회사 소개, 전문 서비스, 칼럼, 상담신청, 비용안내) */}
+        {/* 데스크톱 메뉴 (5대 메뉴: 대표 회계사, 사업자 세무, 상속 · 증여 · 양도, 칼럼, 비용안내) */}
         <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1">
           {siteConfig.navItems.map((item) => {
-            const isActive = pathname.startsWith(item.href);
+            const isActive =
+              pathname.startsWith(item.href) ||
+              (item.subItems?.some(
+                (sub) => !sub.external && pathname.startsWith(sub.href.split("#")[0])
+              ) ?? false);
             return (
               <div
                 key={item.title}
@@ -104,22 +108,32 @@ export default function Header() {
                 {item.subItems && openDropdown === item.title && (
                   <div className="absolute top-full left-0 w-56 pt-2 z-50">
                     <div className="bg-white rounded-xl shadow-xl border border-slate-100 py-2 overflow-hidden ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-150">
-                      {item.subItems.map((sub) => (
-                        <a
-                          key={sub.title}
-                          href={sub.href}
-                          target={sub.external ? "_blank" : undefined}
-                          rel={sub.external ? "noopener noreferrer" : undefined}
-                          className="flex items-center justify-between px-4 py-2.5 text-sm text-slate-600 hover:text-blue-900 hover:bg-blue-50/60 font-medium transition"
-                        >
-                          <span>{sub.title}</span>
-                          {sub.external && (
+                      {item.subItems.map((sub) =>
+                        sub.external ? (
+                          <a
+                            key={sub.title}
+                            href={sub.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => setOpenDropdown(null)}
+                            className="flex items-center justify-between px-4 py-2.5 text-sm text-slate-600 hover:text-blue-900 hover:bg-blue-50/60 font-medium transition"
+                          >
+                            <span>{sub.title}</span>
                             <span className="text-[10px] text-slate-400 bg-slate-100 px-1.5 py-0.5 rounded">
                               외부
                             </span>
-                          )}
-                        </a>
-                      ))}
+                          </a>
+                        ) : (
+                          <Link
+                            key={sub.title}
+                            href={sub.href}
+                            onClick={() => setOpenDropdown(null)}
+                            className="flex items-center justify-between px-4 py-2.5 text-sm text-slate-600 hover:text-blue-900 hover:bg-blue-50/60 font-medium transition"
+                          >
+                            <span>{sub.title}</span>
+                          </Link>
+                        )
+                      )}
                     </div>
                   </div>
                 )}
@@ -185,18 +199,29 @@ export default function Header() {
                 </Link>
                 {item.subItems && (
                   <div className="pl-3 mt-1.5 space-y-1.5 border-l-2 border-slate-100 ml-1">
-                    {item.subItems.map((sub) => (
-                      <a
-                        key={sub.title}
-                        href={sub.href}
-                        target={sub.external ? "_blank" : undefined}
-                        rel={sub.external ? "noopener noreferrer" : undefined}
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="block text-sm text-slate-600 hover:text-blue-900 py-1"
-                      >
-                        {sub.title}
-                      </a>
-                    ))}
+                    {item.subItems.map((sub) =>
+                      sub.external ? (
+                        <a
+                          key={sub.title}
+                          href={sub.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block text-sm text-slate-600 hover:text-blue-900 py-1"
+                        >
+                          {sub.title}
+                        </a>
+                      ) : (
+                        <Link
+                          key={sub.title}
+                          href={sub.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block text-sm text-slate-600 hover:text-blue-900 py-1"
+                        >
+                          {sub.title}
+                        </Link>
+                      )
+                    )}
                   </div>
                 )}
               </div>

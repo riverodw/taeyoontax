@@ -4,8 +4,7 @@ import { siteConfig } from "@/config/site";
 import {
   CheckCircleIcon,
   KakaoIcon,
-  ShieldCheckIcon,
-  ScaleIcon
+  ArrowRightIcon
 } from "@/components/ui/icons";
 
 export const metadata = {
@@ -41,7 +40,7 @@ export default function InheritanceTaxPage() {
           {/* 3대 재산제세 핵심 영역 */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* 1. 상속세 */}
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-5 flex flex-col justify-between">
+            <div id="inheritance" className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-5 flex flex-col justify-between scroll-mt-24">
               <div className="space-y-4">
                 <span className="px-3 py-1 rounded-full bg-blue-900 text-white text-xs font-bold inline-block">
                   01. 상속세
@@ -70,7 +69,7 @@ export default function InheritanceTaxPage() {
             </div>
 
             {/* 2. 증여세 */}
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-5 flex flex-col justify-between">
+            <div id="gift" className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-5 flex flex-col justify-between scroll-mt-24">
               <div className="space-y-4">
                 <span className="px-3 py-1 rounded-full bg-emerald-800 text-white text-xs font-bold inline-block">
                   02. 증여세
@@ -99,7 +98,7 @@ export default function InheritanceTaxPage() {
             </div>
 
             {/* 3. 양도소득세 */}
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-5 flex flex-col justify-between">
+            <div id="capital-gains" className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-5 flex flex-col justify-between scroll-mt-24">
               <div className="space-y-4">
                 <span className="px-3 py-1 rounded-full bg-amber-700 text-white text-xs font-bold inline-block">
                   03. 양도소득세
@@ -129,7 +128,7 @@ export default function InheritanceTaxPage() {
           </div>
 
           {/* 재산제세 세무조사 및 불복 안내 */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-blue-50/60 border border-blue-200/80 space-y-4">
+          <div id="appeal" className="p-8 sm:p-10 rounded-3xl bg-blue-50/60 border border-blue-200/80 space-y-4 scroll-mt-24">
             <span className="text-xs font-bold text-blue-800 uppercase tracking-wider">
               POST-FILING PROTECTION
             </span>
@@ -139,6 +138,15 @@ export default function InheritanceTaxPage() {
             <p className="text-xs sm:text-sm text-slate-700 leading-relaxed max-w-4xl">
               상속·증여세 세무조사 통지, 부동산 취득 자금출처 소명 안내, 양도소득세 비과세 해명 안내문 수령 등 과세관청의 소명 요구에 대한 대응은 물론, 부당한 과세처분에 대한 조세불복(과세전적부심사, 이의신청, 조세심판청구) 및 경정청구까지 치밀한 사실관계 입증과 세법 판례 분석으로 납세자의 정당한 권익을 보호합니다.
             </p>
+            <div className="pt-2 flex justify-end">
+              <Link
+                href="/pricing#consulting"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white hover:bg-blue-50 text-blue-900 border border-blue-200 font-bold text-xs sm:text-sm transition shadow-xs"
+              >
+                <span>상속 · 증여 · 양도 보수 기준 확인하기 (비용안내)</span>
+                <ArrowRightIcon className="w-4 h-4 text-blue-700" />
+              </Link>
+            </div>
           </div>
 
           {/* 하단 상담 배너 */}

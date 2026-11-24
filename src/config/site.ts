@@ -1,3 +1,29 @@
+export interface NavSubItem {
+  title: string;
+  href: string;
+  external?: boolean;
+}
+
+export interface NavItem {
+  title: string;
+  href: string;
+  subItems?: NavSubItem[];
+}
+
+export interface ServiceItem {
+  id: string;
+  title: string;
+  summary: string;
+  desc: string;
+  href: string;
+  highlights: string[];
+  secondaryLink?: {
+    label: string;
+    href: string;
+  };
+  isSpecial: boolean;
+}
+
 export const siteConfig = {
   name: "태윤세무회계",
   fullName: "태윤세무회계사무소",
@@ -61,28 +87,34 @@ export const siteConfig = {
     ]
   },
 
-  // 메인 네비게이션 메뉴 (회사 소개 삭제, 전문 서비스 3대 분야로 재구성)
+  // 메인 네비게이션 메뉴 (5대 메뉴: 대표 회계사, 사업자 세무, 상속 · 증여 · 양도, 칼럼, 비용안내)
   navItems: [
     {
       title: "대표 회계사",
       href: "/accountant"
     },
     {
-      title: "전문 서비스",
-      href: "/services",
+      title: "사업자 세무",
+      href: "/services/business-tax",
       subItems: [
-        { title: "사업자 세무", href: "/services/business-tax" },
-        { title: "부동산 임대업/매매업", href: "/services/property-tax" },
-        { title: "상속 · 증여 · 양도", href: "/services/inheritance-tax" }
+        { title: "세무기장 대리", href: "/services/business-tax#bookkeeping" },
+        { title: "세금 신고대리", href: "/services/business-tax#filing" },
+        { title: "부동산 임대업 · 매매업", href: "/services/property-tax" }
+      ]
+    },
+    {
+      title: "상속 · 증여 · 양도",
+      href: "/services/inheritance-tax",
+      subItems: [
+        { title: "상속세 신고 · 조사 대응", href: "/services/inheritance-tax#inheritance" },
+        { title: "증여세 절세 플랜 · 신고", href: "/services/inheritance-tax#gift" },
+        { title: "양도소득세 절세 · 신고", href: "/services/inheritance-tax#capital-gains" },
+        { title: "세무조사 대응 · 조세불복", href: "/services/inheritance-tax#appeal" }
       ]
     },
     {
       title: "칼럼",
       href: "/column"
-    },
-    {
-      title: "상담 신청",
-      href: "/contact"
     },
     {
       title: "비용안내",
@@ -94,24 +126,25 @@ export const siteConfig = {
         { title: "맞춤 견적 문의", href: "http://pf.kakao.com/_nGpLb/chat", external: true }
       ]
     }
-  ],
+  ] as NavItem[],
 
-  // 3대 핵심 전문 서비스 상세 목록 (사업자세무, 부동산세무, 상속증여양도)
+  // 2대 핵심 세무 서비스 상세 목록 (사업자 세무, 상속 · 증여 · 양도)
   services: [
     {
       id: "business-tax",
       title: "사업자 세무",
-      summary: "법인 및 개인사업자를 위한 세무기장 및 세금 신고대리",
-      desc: "사업자등록부터 장부 기장대리, 부가가치세·종합소득세·법인세 신고대리, 원천세·4대보험 관리까지 사업자의 세무를 체계적으로 지원합니다.",
+      summary: "법인 · 개인사업자 세무기장, 신고대리 및 부동산 임대업 · 매매업 특화 세무",
+      desc: "사업자등록부터 장부 기장대리, 부가가치세·종합소득세·법인세 신고대리, 원천세·4대보험 관리는 물론 부동산 임대사업자·매매사업자의 맞춤형 절세 관리까지 체계적으로 지원합니다.",
       href: "/services/business-tax",
-      isSpecial: false
-    },
-    {
-      id: "property-tax",
-      title: "부동산 임대업/매매업",
-      summary: "부동산 세무 저서 집필 저자의 특화된 절세 솔루션",
-      desc: "부동산 매매사업자 및 주택·상가 임대사업자를 위한 장부 기장, 부가가치세·종합소득세 신고와 맞춤형 절세 관리를 제공합니다.",
-      href: "/services/property-tax",
+      highlights: [
+        "법인 · 개인사업자 세무기장 및 원천세 · 4대보험 관리",
+        "부가가치세 · 종합소득세 · 법인세 신고대리",
+        "부동산 매매사업자 · 임대사업자 특화 세무 관리"
+      ],
+      secondaryLink: {
+        label: "부동산 임대업 · 매매업 안내",
+        href: "/services/property-tax"
+      },
       isSpecial: false
     },
     {
@@ -120,7 +153,13 @@ export const siteConfig = {
       summary: "사전 절세 설계부터 신고 대행, 세무조사 및 조세불복 대응",
       desc: "상속세·증여세·양도소득세 사전 절세 플랜 수립 및 신고 대행부터 해명자료 제출, 세무조사 대응, 조세불복까지 안전하게 자산을 지켜드립니다.",
       href: "/services/inheritance-tax",
+      highlights: [
+        "상속세 신고 · 감정평가 연계 · 세무조사 대응",
+        "증여세 10년 주기 사전증여 · 부담부증여 플랜",
+        "양도소득세 비과세 · 다주택 중과 검토 및 신고",
+        "해명자료 제출 · 세무조사 대응 및 조세불복"
+      ],
       isSpecial: false
     }
-  ]
+  ] as ServiceItem[]
 };
