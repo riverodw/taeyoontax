@@ -108,7 +108,7 @@ export const siteConfig = {
         { title: "부동산 임대업 · 매매업", href: "/services/property-tax" },
         { title: "병원 · 동물병원", href: "/services/medical-tax" },
         { title: "식당 · 카페", href: "/services/restaurant-tax" },
-        { title: "학원", href: "/services/academy-tax" }
+        { title: "학원 · 요가 · 필라테스", href: "/services/academy-tax" }
       ]
     },
     {
@@ -162,7 +162,7 @@ export const siteConfig = {
     },
     {
       id: "academy-tax",
-      title: "학원",
+      title: "학원 · 요가 · 필라테스",
       badge: "교육 · 스튜디오 특화",
       summary: "면세 학원(2월 사업장현황신고)과 요가·필라테스 등 과세 학원(부가세 조기환급) 구분 관리 및 강사 인건비·현금영수증 대응",
       href: "/services/academy-tax"
@@ -175,10 +175,10 @@ export const siteConfig = {
       id: "business-tax",
       title: "사업자 세무",
       summary: "업종별 특화 절세 관리부터 법인 · 개인사업자 세무기장 및 신고대리까지",
-      desc: "부동산 임대·매매업, 병원·동물병원, 식당·카페, 학원 등 업종별 핵심 세무 리스크를 정밀 관리하고, 장부 기장대리·부가세·종합소득세·법인세 신고와 원천세·4대보험까지 체계적으로 지원합니다.",
+      desc: "부동산 임대·매매업, 병원·동물병원, 식당·카페, 학원·요가·필라테스 등 업종별 핵심 세무 리스크를 정밀 관리하고, 장부 기장대리·부가세·종합소득세·법인세 신고와 원천세·4대보험까지 체계적으로 지원합니다.",
       href: "/services/business-tax",
       highlights: [
-        "부동산 임대업·매매업, 병원·동물병원, 식당·카페, 학원 업종별 특화 세무",
+        "부동산 임대업·매매업, 병원·동물병원, 식당·카페, 학원·요가·필라테스 업종별 특화 세무",
         "법인 · 개인사업자 세무기장 및 원천세 · 4대보험 관리",
         "부가가치세 · 사업장현황신고 · 종합소득세 · 법인세 신고대리"
       ],
@@ -186,7 +186,7 @@ export const siteConfig = {
         { label: "부동산 임대업 · 매매업", href: "/services/property-tax" },
         { label: "병원 · 동물병원", href: "/services/medical-tax" },
         { label: "식당 · 카페", href: "/services/restaurant-tax" },
-        { label: "학원", href: "/services/academy-tax" }
+        { label: "학원 · 요가 · 필라테스", href: "/services/academy-tax" }
       ],
       isSpecial: false
     },

@@ -68,15 +68,6 @@ export default function ServicesPage() {
                       <span>자세히 보기</span>
                       <ArrowRightIcon className="w-3.5 h-3.5" />
                     </Link>
-                    <a
-                      href={siteConfig.kakaoChannelUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-[#FEE500] hover:bg-[#FADA0A] text-[#191919] text-xs font-bold transition"
-                    >
-                      <KakaoIcon className="w-3.5 h-3.5" />
-                      <span>카톡 문의</span>
-                    </a>
                   </div>
                 </div>
 

@@ -159,22 +159,14 @@ export default function HomePage() {
                   )}
                 </div>
 
-                <div className="pt-6 mt-8 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
+                <div className="pt-6 mt-8 border-t border-slate-100 flex items-center">
                   <Link
                     href={srv.href}
-                    className="text-sm sm:text-base font-bold text-blue-900 hover:text-blue-700 flex items-center gap-1.5 transition"
+                    className="text-sm sm:text-base font-bold text-blue-900 hover:text-blue-700 inline-flex items-center gap-1.5 transition"
                   >
                     <span>{srv.title} 자세히 보기</span>
                     <ArrowRightIcon className="w-4 h-4" />
                   </Link>
-                  <a
-                    href={siteConfig.kakaoChannelUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs sm:text-sm font-bold text-[#191919] bg-[#FEE500] hover:bg-[#FADA0A] px-4 py-2 rounded-xl transition"
-                  >
-                    카톡 문의
-                  </a>
                 </div>
               </div>
             ))}
@@ -521,21 +513,6 @@ export default function HomePage() {
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                     아래 버튼을 눌러 네이버 폼에 성함, 연락처, 상담 희망 분야 및 문의 내용을 남겨주시면 접수 내역이 즉시 전달됩니다.
                   </p>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-700">
-                  <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 flex items-center gap-2.5">
-                    <CheckCircleIcon className="w-4 h-4 text-blue-600 shrink-0" />
-                    <span className="font-medium">사업자 기장 · 신고 문의</span>
-                  </div>
-                  <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 flex items-center gap-2.5">
-                    <CheckCircleIcon className="w-4 h-4 text-blue-600 shrink-0" />
-                    <span className="font-medium">부동산 임대업 · 매매업</span>
-                  </div>
-                  <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 flex items-center gap-2.5">
-                    <CheckCircleIcon className="w-4 h-4 text-blue-600 shrink-0" />
-                    <span className="font-medium">상속 · 증여 · 양도 상담</span>
-                  </div>
                 </div>
 
                 <a

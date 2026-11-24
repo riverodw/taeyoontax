@@ -64,7 +64,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/services/academy-tax" className="hover:text-white transition">
-                  학원
+                  학원 · 요가 · 필라테스
                 </Link>
               </li>
               <li>

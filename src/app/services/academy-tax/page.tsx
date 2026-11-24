@@ -4,8 +4,8 @@ import { BusinessTaxCtaBanner } from "@/components/services/CommonBusinessTaxSec
 import { CheckCircleIcon, ShieldCheckIcon } from "@/components/ui/icons";
 
 export const metadata = {
-  title: "학원 세무 (면세 학원 · 요가 · 필라테스) | 사업자 세무",
-  description: "태윤세무회계 학원 특화 세무 서비스. 교육청 등록 면세 학원(사업장현황신고)부터 요가·필라테스·PT·취미학원 등 과세 학원(부가세 조기환급·수강권 관리), 강사 인건비 및 현금영수증 의무발행 관리."
+  title: "학원 · 요가 · 필라테스 세무 | 사업자 세무",
+  description: "태윤세무회계 학원·요가·필라테스 특화 세무 서비스. 교육청 등록 면세 학원(사업장현황신고)부터 요가·필라테스·PT·취미학원 등 과세 학원(부가세 조기환급·수강권 관리), 강사 인건비 및 현금영수증 의무발행 관리."
 };
 
 export default function AcademyTaxPage() {
@@ -20,8 +20,8 @@ export default function AcademyTaxPage() {
               BUSINESS TAX · ACADEMY · YOGA · PILATES
             </span>
             <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
-              학원 <br />
-              <span className="text-blue-400">면세 학원 · 요가 · 필라테스 등 과세 학원 세무</span>
+              학원 · 요가 · 필라테스 <br />
+              <span className="text-blue-400">면세 학원 · 과세 스튜디오 맞춤 세무</span>
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
               교육청 인가·등록을 받은 면세 학원·교습소부터 요가·필라테스·PT·취미·성인 교육 등 과세 학원까지, 업종별 과·면세 구조에 따라 신고 방식과 절세 전략이 완전히 달라집니다. 유형별 핵심 쟁점을 정확히 구분해 관리해 드립니다.

@@ -7,7 +7,7 @@ import { ArrowRightIcon } from "@/components/ui/icons";
 
 export const metadata = {
   title: "사업자 세무 | 업종별 특화 세무 · 세무기장 · 신고대리",
-  description: "태윤세무회계 사업자 세무 서비스. 부동산 임대업·매매업, 병원·동물병원, 식당·카페, 학원 등 업종별 특화 세무와 법인·개인사업자 세무기장 및 신고대리."
+  description: "태윤세무회계 사업자 세무 서비스. 부동산 임대업·매매업, 병원·동물병원, 식당·카페, 학원·요가·필라테스 등 업종별 특화 세무와 법인·개인사업자 세무기장 및 신고대리."
 };
 
 export default function BusinessTaxPage() {
@@ -26,7 +26,7 @@ export default function BusinessTaxPage() {
               <span className="text-blue-400">업종별 특화 관리 · 기장 · 신고</span>
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              부동산 임대업·매매업, 병원·동물병원, 식당·카페, 학원 등 업종마다 달라지는 핵심 세무 쟁점을 정밀 관리하고, 법인·개인사업자의 월별 세무기장과 정기 세금 신고를 책임지고 수행합니다.
+              부동산 임대업·매매업, 병원·동물병원, 식당·카페, 학원·요가·필라테스 등 업종마다 달라지는 핵심 세무 쟁점을 정밀 관리하고, 법인·개인사업자의 월별 세무기장과 정기 세금 신고를 책임지고 수행합니다.
             </p>
           </div>
         </div>
