@@ -36,27 +36,33 @@ export default function PropertyTaxPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 space-y-20">
           {/* 상단 핵심 포인트 강조 박스 */}
-          <div className="p-7 sm:p-8 rounded-3xl bg-blue-50/70 border border-blue-200/80 space-y-4">
-            <div className="inline-flex items-center gap-2 text-xs font-bold text-blue-800 uppercase tracking-wider">
-              <ShieldCheckIcon className="w-4 h-4 text-blue-700" />
+          <div className="p-6 sm:p-8 rounded-3xl bg-blue-50/70 border border-blue-200/80 space-y-5">
+            <div className="inline-flex items-center gap-2.5 text-base sm:text-lg font-extrabold text-blue-900 tracking-tight">
+              <ShieldCheckIcon className="w-5 h-5 sm:w-6 sm:h-6 text-blue-700 shrink-0" />
               <span>부동산 임대업 · 매매업에서 특별히 중요한 세무 핵심</span>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-800">
-              <div className="p-4 rounded-2xl bg-white border border-blue-100 space-y-1">
-                <div className="font-bold text-blue-950">01. 매매차익 예정신고 · 비교과세</div>
-                <p className="text-xs text-slate-600 leading-relaxed">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 text-slate-800">
+              <div className="p-5 sm:p-6 rounded-2xl bg-white border border-blue-100 shadow-xs space-y-2">
+                <div className="text-base sm:text-lg font-extrabold text-blue-950 leading-snug">
+                  01. 매매차익 예정신고 · 비교과세
+                </div>
+                <p className="text-sm sm:text-[15px] text-slate-700 leading-relaxed">
                   매도일 말일로부터 2개월 이내 예정신고와 종합소득세·양도세 중과 비교과세 정밀 검토가 필수입니다.
                 </p>
               </div>
-              <div className="p-4 rounded-2xl bg-white border border-blue-100 space-y-1">
-                <div className="font-bold text-blue-950">02. 건물분 부가세 환급 · 포괄양수도</div>
-                <p className="text-xs text-slate-600 leading-relaxed">
+              <div className="p-5 sm:p-6 rounded-2xl bg-white border border-blue-100 shadow-xs space-y-2">
+                <div className="text-base sm:text-lg font-extrabold text-blue-950 leading-snug">
+                  02. 건물분 부가세 환급 · 포괄양수도
+                </div>
+                <p className="text-sm sm:text-[15px] text-slate-700 leading-relaxed">
                   상가·오피스텔 취득·양도 시 부가세 조기환급, 토지·건물 가액 안분 및 포괄양수도 요건을 정확히 점검합니다.
                 </p>
               </div>
-              <div className="p-4 rounded-2xl bg-white border border-blue-100 space-y-1">
-                <div className="font-bold text-blue-950">03. 주택임대 특례 · 필요경비 극대화</div>
-                <p className="text-xs text-slate-600 leading-relaxed">
+              <div className="p-5 sm:p-6 rounded-2xl bg-white border border-blue-100 shadow-xs space-y-2">
+                <div className="text-base sm:text-lg font-extrabold text-blue-950 leading-snug">
+                  03. 주택임대 특례 · 필요경비 극대화
+                </div>
+                <p className="text-sm sm:text-[15px] text-slate-700 leading-relaxed">
                   감가상각비·대출이자·수선비 반영 및 등록임대주택 감면·종부세 합산배제 요건을 체계적으로 관리합니다.
                 </p>
               </div>
@@ -72,35 +78,35 @@ export default function PropertyTaxPage() {
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
                 부동산 매매사업자 핵심 세무
               </h2>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-600 text-sm sm:text-base">
                 복잡하고 까다로운 부동산 매매사업자의 장부 기장부터 매매차익 예정신고, 비교과세 검토까지 정밀하게 수행합니다.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
-                <h3 className="font-bold text-base text-slate-900">
+                <h3 className="font-bold text-lg text-slate-900">
                   매매사업자 장부 기장 및 필요경비 관리
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
+                <p className="text-sm sm:text-[15px] text-slate-700 leading-relaxed">
                   부동산 취득부터 보유·매도 시까지 발생하는 대출 이자비용, 명도비, 인테리어비, 취득세, 중개수수료 등 각종 필요경비를 장부에 체계적으로 반영하여 소득세를 절감합니다.
                 </p>
               </div>
 
               <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
-                <h3 className="font-bold text-base text-slate-900">
+                <h3 className="font-bold text-lg text-slate-900">
                   매매차익 예정신고 및 비교과세 검토
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
+                <p className="text-sm sm:text-[15px] text-slate-700 leading-relaxed">
                   부동산 매도 시 법정 기한 내 토지등 매매차익 예정신고를 대행하며, 종합소득세율과 양도소득세 중과세율을 비교하는 주택·비사업용토지 비교과세 규정을 면밀히 검토합니다.
                 </p>
               </div>
 
               <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
-                <h3 className="font-bold text-base text-slate-900">
+                <h3 className="font-bold text-lg text-slate-900">
                   부가가치세 안분 및 개인·법인 결산 신고
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
+                <p className="text-sm sm:text-[15px] text-slate-700 leading-relaxed">
                   국민주택 규모 초과 주택 및 상가·오피스텔 매매에 따른 토지·건물 부가가치세 안분 계산·신고와 개인·법인 매매사업자의 정기 종합소득세 및 법인세 결산 신고를 진행합니다.
                 </p>
               </div>
@@ -116,35 +122,35 @@ export default function PropertyTaxPage() {
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
                 부동산 임대사업자 핵심 세무
               </h2>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-600 text-sm sm:text-base">
                 상가·오피스텔·꼬마빌딩 등 일반임대사업자와 주택임대사업자의 기장, 세금 신고 및 감면 요건을 체계적으로 관리합니다.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="p-6 rounded-2xl bg-blue-50/50 border border-blue-200 space-y-3">
-                <h3 className="font-bold text-base text-blue-950">
+                <h3 className="font-bold text-lg text-blue-950">
                   상가 · 오피스텔 임대사업자 세무
                 </h3>
-                <p className="text-xs text-slate-700 leading-relaxed">
+                <p className="text-sm sm:text-[15px] text-slate-700 leading-relaxed">
                   상업용 부동산 분양·취득 시 건물분 부가가치세 조기환급 신청, 포괄양수도 계약 검토, 임대료 및 간주임대료 부가가치세 정기 신고를 정확히 대행합니다.
                 </p>
               </div>
 
               <div className="p-6 rounded-2xl bg-blue-50/50 border border-blue-200 space-y-3">
-                <h3 className="font-bold text-base text-blue-950">
+                <h3 className="font-bold text-lg text-blue-950">
                   주택임대사업자 신고 및 세제 혜택 관리
                 </h3>
-                <p className="text-xs text-slate-700 leading-relaxed">
+                <p className="text-sm sm:text-[15px] text-slate-700 leading-relaxed">
                   면세사업자 사업장현황신고 대행은 물론, 등록 임대주택의 임대소득세 감면, 종합부동산세 합산배제, 거주주택 비과세 특례 요건을 꼼꼼하게 점검합니다.
                 </p>
               </div>
 
               <div className="p-6 rounded-2xl bg-blue-50/50 border border-blue-200 space-y-3">
-                <h3 className="font-bold text-base text-blue-950">
+                <h3 className="font-bold text-lg text-blue-950">
                   임대소득 장부 기장 및 필요경비 최적화
                 </h3>
-                <p className="text-xs text-slate-700 leading-relaxed">
+                <p className="text-sm sm:text-[15px] text-slate-700 leading-relaxed">
                   임대 부동산의 감가상각비, 대출이자, 수선비, 재산세 등 필요경비를 빠짐없이 반영하여 개인 및 법인 임대사업자의 소득세·법인세 부담을 최소화합니다.
                 </p>
               </div>
