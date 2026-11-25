@@ -12,7 +12,7 @@ import {
 
 export const metadata = {
   title: "지식창고 | 오회계사의 세무 칼럼 & 네이버 블로그",
-  description: "오동욱 대표 공인회계사·세무사의 네이버 공식 블로그 《오회계사의 지식창고》 최신 세법 개정 분석과 실전 절세 팁."
+  description: "오동욱 대표 공인회계사·세무사의 네이버 블로그 《오회계사의 지식창고》 최신 세법 개정 분석과 실전 절세 팁."
 };
 
 export default function InsightsPage() {
@@ -75,7 +75,7 @@ export default function InsightsPage() {
               오회계사의 지식창고
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              오동욱 대표 공인회계사·세무사가 직접 연재하는 네이버 공식 블로그의 전문 칼럼과 실전 세법 해석을 만나보세요.
+              오동욱 대표 공인회계사·세무사가 직접 연재하는 네이버 블로그의 전문 칼럼과 실전 세법 해석을 만나보세요.
             </p>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function InsightsPage() {
             </div>
             <div>
               <h2 className="text-sm font-bold text-slate-900">
-                네이버 공식 블로그: blog.naver.com/riverodw
+                네이버 블로그: blog.naver.com/riverodw
               </h2>
               <p className="text-xs text-slate-600">
                 수백 편의 깊이 있는 부동산 세무 칼럼과 질의응답을 블로그에서 바로 확인하실 수 있습니다.
@@ -118,7 +118,7 @@ export default function InsightsPage() {
               주요 추천 절세 칼럼
             </h2>
             <span className="text-xs text-slate-500">
-              클릭 시 네이버 공식 블로그로 이동합니다
+              클릭 시 네이버 블로그로 이동합니다
             </span>
           </div>
 
