@@ -112,7 +112,7 @@ export default function ContactPage() {
                     href={siteConfig.naverFormUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-4 px-6 rounded-xl bg-blue-900 hover:bg-blue-800 text-white font-bold text-sm sm:text-base shadow-md transition flex items-center justify-center gap-2"
+                    className="w-full py-4 px-6 rounded-xl bg-[#03C75A] hover:bg-[#02B351] text-white font-bold text-sm sm:text-base shadow-md transition flex items-center justify-center gap-2"
                   >
                     <span>상담 신청 작성하기 (네이버 폼)</span>
                     <ExternalLinkIcon className="w-4 h-4" />

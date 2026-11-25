@@ -62,7 +62,7 @@ export function BusinessTaxCtaBanner({
           href={siteConfig.naverFormUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition"
+          className="px-6 py-3.5 rounded-xl bg-[#03C75A] hover:bg-[#02B351] text-white font-semibold text-sm transition"
         >
           상담 신청
         </a>

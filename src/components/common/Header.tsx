@@ -157,7 +157,7 @@ export default function Header() {
             href={siteConfig.naverFormUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-blue-900 hover:bg-blue-800 text-white font-semibold text-xs shadow-md transition transform hover:-translate-y-0.5"
+            className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#03C75A] hover:bg-[#02B351] text-white font-semibold text-xs shadow-md transition transform hover:-translate-y-0.5"
           >
             <span>상담 신청</span>
           </a>
@@ -243,7 +243,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center py-3 rounded-xl bg-blue-900 text-white font-semibold text-sm"
+              className="w-full flex items-center justify-center py-3 rounded-xl bg-[#03C75A] hover:bg-[#02B351] text-white font-semibold text-sm transition"
             >
               상담 신청
             </a>

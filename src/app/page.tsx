@@ -75,7 +75,7 @@ export default function HomePage() {
                 href={siteConfig.naverFormUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-base shadow-lg hover:shadow-blue-600/30 transition-all transform hover:-translate-y-0.5"
+                className="flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-[#03C75A] hover:bg-[#02B351] text-white font-semibold text-base shadow-lg hover:shadow-[#03C75A]/30 transition-all transform hover:-translate-y-0.5"
               >
                 <span>상담 신청</span>
                 <ArrowRightIcon className="w-4 h-4" />
@@ -412,7 +412,7 @@ export default function HomePage() {
                   href={siteConfig.naverFormUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-4 px-6 rounded-xl bg-blue-900 hover:bg-blue-800 text-white font-bold text-sm sm:text-base shadow-lg transition flex items-center justify-center gap-2"
+                  className="w-full py-4 px-6 rounded-xl bg-[#03C75A] hover:bg-[#02B351] text-white font-bold text-sm sm:text-base shadow-lg transition flex items-center justify-center gap-2"
                 >
                   <span>상담 신청서 작성하기 (네이버 폼)</span>
                   <ExternalLinkIcon className="w-4 h-4" />
