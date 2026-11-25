@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 import FloatingKakao from "@/components/common/FloatingKakao";
 import MobileStickyBar from "@/components/common/MobileStickyBar";
-import { siteConfig } from "@/config/site";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const notoSansKr = Noto_Sans_KR({
+  variable: "--font-noto-sans-kr",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -74,8 +75,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}>
-      <body className="min-h-screen flex flex-col bg-white text-slate-900 font-sans antialiased selection:bg-blue-600 selection:text-white">
+    <html lang="ko" className={`${notoSansKr.variable} ${geistMono.variable} scroll-smooth`}>
+      <body className="min-h-screen flex flex-col bg-white text-slate-900 font-sans font-normal antialiased selection:bg-blue-600 selection:text-white">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
