@@ -29,7 +29,7 @@ export default function HomePage() {
       {/* =========================================================
           1. HERO SECTION (메인 배너)
       ========================================================= */}
-      <section className="relative overflow-hidden bg-[#2b3545] text-white pt-16 pb-24 lg:pt-24 lg:pb-32">
+      <section className="relative overflow-hidden bg-[#2b3545] text-white py-16 lg:py-24">
         {/* 세무·회계 오피스 데스크 배경 이미지 및 슬레이트 네이비 오버레이 */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none scale-105"
@@ -53,43 +53,6 @@ export default function HomePage() {
               단순한 숫자 정리가 아닌, 대표 세무사가 직접 설계하는 1:1 정밀 절세 플랜.
               부동산 세무부터 상속·증여, 법인 컨설팅까지 사업의 든든한 내일을 함께 만듭니다.
             </p>
-
-            {/* CTA 버튼 그룹 (카카오톡 비즈니스 채널 최우선 강조) */}
-            <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
-              {/* 카카오톡 1:1 상담 바로가기 */}
-              <a
-                href={siteConfig.kakaoChannelUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-[#FEE500] hover:bg-[#FADA0A] text-[#191919] font-bold text-base shadow-xl hover:shadow-yellow-500/20 transition-all transform hover:-translate-y-0.5 active:scale-95"
-              >
-                <KakaoIcon className="w-5 h-5 text-[#191919]" />
-                <span>카카오톡 1:1 실시간 상담</span>
-                <span className="text-xs bg-black/10 px-2 py-0.5 rounded font-semibold ml-1">
-                  빠른 답변
-                </span>
-              </a>
-
-              {/* 상담 신청 (네이버 폼 바로가기) */}
-              <a
-                href={siteConfig.naverFormUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-[#03C75A] hover:bg-[#02B351] text-white font-semibold text-base shadow-lg hover:shadow-[#03C75A]/30 transition-all transform hover:-translate-y-0.5"
-              >
-                <span>상담 신청</span>
-                <ArrowRightIcon className="w-4 h-4" />
-              </a>
-
-              {/* 전화 문의 */}
-              <a
-                href={`tel:${siteConfig.tel}`}
-                className="flex items-center justify-center gap-2 px-5 py-4 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700/60 font-medium text-sm transition"
-              >
-                <PhoneIcon className="w-4 h-4 text-blue-400" />
-                <span>{siteConfig.tel}</span>
-              </a>
-            </div>
           </div>
         </div>
       </section>
