@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import KakaoFeedbackSection from "@/components/home/KakaoFeedbackSection";
+import ClientReviewSlider from "@/components/home/ClientReviewSlider";
 import {
   KakaoIcon,
   NaverIcon,
@@ -256,9 +256,9 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================
-          4. KAKAO CLIENT FEEDBACK (카카오톡 대화 피드백)
+          4. CLIENT REVIEWS (고객 후기 슬라이더)
       ========================================================= */}
-      <KakaoFeedbackSection />
+      <ClientReviewSlider />
 
       {/* =========================================================
           5. BLOG SHOWCASE (오회계사의 지식창고 연계)

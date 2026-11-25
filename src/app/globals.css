@@ -30,3 +30,22 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes review-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-review-marquee {
+  display: flex;
+  width: max-content;
+  animation: review-marquee 45s linear infinite;
+}
+
+.animate-review-marquee:hover {
+  animation-play-state: paused;
+}
