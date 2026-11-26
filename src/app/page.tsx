@@ -29,27 +29,26 @@ export default function HomePage() {
       {/* =========================================================
           1. HERO SECTION (메인 배너)
       ========================================================= */}
-      <section className="relative overflow-hidden bg-[#2b3545] text-white py-16 lg:py-24">
-        {/* 세무·회계 오피스 데스크 배경 이미지 및 슬레이트 네이비 오버레이 */}
+      <section className="relative overflow-hidden bg-[#7a644e] text-white py-20 lg:py-28">
+        {/* 밝고 차분한 우드 데스크 세무 상담 배경 이미지 및 은은한 가독성 오버레이 */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none scale-105"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2000&q=85')"
+            backgroundImage: "url('/images/hero-tax-desk.jpg')"
           }}
         ></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#232d3d]/90 via-[#2b3545]/82 to-[#2b3545]/75 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#241d17]/55 via-[#241d17]/32 to-[#241d17]/12 pointer-events-none"></div>
 
         <div className="relative max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl space-y-6">
+          <div className="max-w-2xl space-y-6">
             {/* 메인 타이틀 */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.2] text-white">
-              세무의 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">깊이가 다르면,</span><br />
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.22] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.28)]">
+              세무의 <span className="text-amber-100">깊이가 다르면,</span><br />
               절세의 결과가 달라집니다.
             </h1>
 
             {/* 서브 타이틀 */}
-            <p className="text-base sm:text-xl text-slate-300 leading-relaxed max-w-2xl font-light">
+            <p className="text-base sm:text-xl text-white/95 leading-relaxed max-w-xl font-normal drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]">
               단순한 숫자 정리가 아닌, 대표 세무사가 직접 설계하는 1:1 정밀 절세 플랜.
               부동산 세무부터 상속·증여, 법인 컨설팅까지 사업의 든든한 내일을 함께 만듭니다.
             </p>
