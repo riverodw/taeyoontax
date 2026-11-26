@@ -115,7 +115,7 @@ export const siteConfig = {
       title: "상속 · 증여 · 양도",
       href: "/services/inheritance-tax",
       subItems: [
-        { title: "상속세 신고 · 조사 대응", href: "/services/inheritance-tax#inheritance" },
+        { title: "상속세 신고 절차 · 필요서류", href: "/services/inheritance-tax/filing" },
         { title: "증여세 절세 플랜 · 신고", href: "/services/inheritance-tax#gift" },
         { title: "양도소득세 절세 · 신고", href: "/services/inheritance-tax#capital-gains" },
         { title: "세무조사 대응 · 조세불복", href: "/services/inheritance-tax#appeal" }

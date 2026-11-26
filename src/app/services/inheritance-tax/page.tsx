@@ -34,6 +34,39 @@ export default function InheritanceTaxPage() {
         </div>
       </section>
 
+      {/* 상단 서브 네비게이션 바 */}
+      <nav
+        aria-label="상속·증여·양도 이동 메뉴"
+        className="bg-slate-50 border-b border-slate-200"
+      >
+        <div className="max-w-7xl mx-auto px-6 py-3.5 flex flex-wrap items-center gap-2">
+          <Link
+            href="/services/inheritance-tax"
+            className="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold bg-blue-900 text-white shadow-xs transition"
+          >
+            상속 · 증여 · 양도 전체
+          </Link>
+          <Link
+            href="/services/inheritance-tax/filing"
+            className="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-700 border border-slate-200 hover:border-blue-300 hover:text-blue-900 transition"
+          >
+            상속세 신고 절차 · 필요서류
+          </Link>
+          <a
+            href="#gift"
+            className="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-700 border border-slate-200 hover:border-blue-300 hover:text-blue-900 transition"
+          >
+            증여세
+          </a>
+          <a
+            href="#capital-gains"
+            className="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-700 border border-slate-200 hover:border-blue-300 hover:text-blue-900 transition"
+          >
+            양도소득세
+          </a>
+        </div>
+      </nav>
+
       {/* 본문 콘텐츠 */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 space-y-20">
@@ -65,6 +98,15 @@ export default function InheritanceTaxPage() {
                     <span>상속세 세무조사 현장 입회 및 소명자료 작성 전담</span>
                   </li>
                 </ul>
+              </div>
+              <div className="pt-4 border-t border-slate-200">
+                <Link
+                  href="/services/inheritance-tax/filing"
+                  className="w-full py-3 px-4 rounded-xl bg-blue-900 hover:bg-blue-700 text-white font-bold text-sm flex items-center justify-center gap-1.5 shadow-sm transition"
+                >
+                  <span>상속세 신고 절차 · 필요서류 보기</span>
+                  <ArrowRightIcon className="w-4 h-4" />
+                </Link>
               </div>
             </div>
 
@@ -172,12 +214,14 @@ export default function InheritanceTaxPage() {
                 <KakaoIcon className="w-4 h-4" />
                 <span>카카오톡 채널 문의</span>
               </a>
-              <Link
-                href="/contact"
-                className="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition"
+              <a
+                href={siteConfig.naverFormUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3.5 rounded-xl bg-[#03C75A] hover:bg-[#02B351] text-white font-semibold text-sm transition"
               >
                 상담 신청
-              </Link>
+              </a>
             </div>
           </div>
         </div>
